@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HIMS | Advanced Cloud-Based Hospital Management System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar glass">
+        <div class="container nav-content">
+            <div class="logo"><i class="fa-solid fa-hospital"></i> HIMS</div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu"><i
+                    class="fa-solid fa-bars"></i></button>
+            <div class="nav-links" id="navLinks">
+                <a href="#features" class="mob-link">Features</a>
+                <a href="#modules" class="mob-link">Modules</a>
+                <a href="#telemedicine" class="mob-link">Telemedicine</a>
+                <a href="#pricing" class="mob-link">Pricing</a>
+            </div>
+            <div class="nav-actions" id="navActions">
+                <a href="#" class="btn btn-outline login-btn">Login</a>
+                <a href="#" class="btn btn-primary demo-btn">Request Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg">
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-text gs-reveal">
+                <div class="badge">🚀 The Future of Healthcare IT</div>
+                <h1 class="hero-title"><span>Hospital Management System</span></h1>
+                <p class="hero-subtitle">Automate your healthcare facility with a comprehensive Hospital Information
+                    Management System (HIMS) featuring integrated modules for patient management, billing, EMR, lab,
+                    pharmacy, and telemedicine.</p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary btn-lg">Start Free Trial <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="hero-trust">
+                    <div class="avatars">
+                        <img src="https://i.pravatar.cc/100?img=1" alt="Doctor">
+                        <img src="https://i.pravatar.cc/100?img=2" alt="Doctor">
+                        <img src="https://i.pravatar.cc/100?img=3" alt="Doctor">
+                    </div>
+                    <span>Trusted by <strong>10,000+</strong> healthcare professionals</span>
+                </div>
+            </div>
+            <div class="hero-visual gs-reveal">
+                <div class="mockup-container glass-card">
+                    <div class="mockup-header">
+                        <div class="dots"><span></span><span></span><span></span></div>
+                        <div class="mockup-title">HIMS Dashboard</div>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="mockup-sidebar"></div>
+                        <div class="mockup-content">
+                            <div class="mockup-topbar"></div>
+                            <div class="mockup-stats">
+                                <div class="stat-box">
+                                    <div style="font-size: 10px; color: #64748B; padding: 10px 10px 0;">New Patients
+                                    </div>
+                                    <div style="font-size: 16px; font-weight: 700; padding: 0 10px;">+124</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div style="font-size: 10px; color: #64748B; padding: 10px 10px 0;">Revenue</div>
+                                    <div style="font-size: 16px; font-weight: 700; color: #10B981; padding: 0 10px;">
+                                        $12.5k</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div style="font-size: 10px; color: #64748B; padding: 10px 10px 0;">Consultations
+                                    </div>
+                                    <div style="font-size: 16px; font-weight: 700; padding: 0 10px;">342</div>
+                                </div>
+                            </div>
+                            <div class="mockup-chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-card c-1 glass-card">
+                    <i class="fa-solid fa-calendar-check color-primary"></i>
+                    <div>
+                        <h4>New Appointment</h4>
+                        <p>Dr. Sarah • 10:30 AM</p>
+                    </div>
+                </div>
+                <div class="floating-card c-2 glass-card">
+                    <i class="fa-solid fa-file-invoice-dollar color-success"></i>
+                    <div>
+                        <h4>Invoice Paid</h4>
+                        <p>₹12,500.00</p>
+                    </div>
+                </div>
+                <div class="floating-card c-3 glass-card">
+                    <i class="fa-solid fa-chart-line color-warning"></i>
+                    <div>
+                        <h4>Patient Growth</h4>
+                        <p>+24% this month</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="trust-bar">
+        <div class="container trust-grid gs-reveal">
+            <div class="trust-item"><i class="fa-solid fa-server"></i> 99.99% Uptime</div>
+            <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> Secure Cloud</div>
+            <div class="trust-item"><i class="fa-solid fa-hospital"></i> Trusted by 500+ Hospitals</div>
+            <div class="trust-item"><i class="fa-solid fa-mobile-screen"></i> Mobile Apps</div>
+            <div class="trust-item"><i class="fa-solid fa-chart-pie"></i> Scalable Pricing</div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us section-padding bg-light">
+        <div class="container">
+            <div class="section-title text-center gs-reveal">
+                <h2>Why Choose HIMS?</h2>
+                <p>Designed to reduce administrative burden and improve patient outcomes.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature-card glass-card hover-lift">
+                    <div class="icon-wrap"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>Fully Integrated System</h3>
+                    <p>Connect every department from reception to the pharmacy on a single seamless platform.</p>
+                </div>
+                <div class="feature-card glass-card hover-lift">
+                    <div class="icon-wrap"><i class="fa-solid fa-lock"></i></div>
+                    <h3>Secure & Reliable</h3>
+                    <p>Bank-level encryption and automated backups ensure your sensitive data is always safe.</p>
+                </div>
+                <div class="feature-card glass-card hover-lift">
+                    <div class="icon-wrap"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Patient-Centric Design</h3>
+                    <p>Enhance patient experience with secure portals, telemedicine apps, and quick check-ins.</p>
+                </div>
+                <div class="feature-card glass-card hover-lift">
+                    <div class="icon-wrap"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                    <h3>Affordable Pricing & Trust</h3>
+                    <p>Flexible enterprise-grade plans accessible to any practice size, trusted by top healthcare
+                        institutions globally.</p>
+                </div>
+                <div class="feature-card glass-card hover-lift">
+                    <div class="icon-wrap"><i class="fa-solid fa-brain"></i></div>
+                    <h3>AI-Powered Analytics</h3>
+                    <p>Leverage artificial intelligence to predict patient trends, optimize staffing, and boost your
+                        facility's overall revenue.</p>
+                </div>
+                <div class="feature-card glass-card hover-lift">
+                    <div class="icon-wrap"><i class="fa-solid fa-headset"></i></div>
+                    <h3>24/7 Premium Support</h3>
+                    <p>Dedicated technical team available round-the-clock to assist with any system queries, training,
+                        or integrations instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Modules -->
+    <section class="core-modules section-padding" id="modules">
+        <div class="container">
+            <div class="section-title text-center gs-reveal">
+                <h2>Core Modules</h2>
+                <p>Tailored solutions for healthcare facilities of every size.</p>
+            </div>
+            <div class="grid grid-2 modules-grid">
+                <div class="module-card gs-reveal">
+                    <div class="module-content">
+                        <h3>Clinic Management Software</h3>
+                        <p>Perfect for individual practitioners and small clinics. Manage appointments, billing, and
+                            patient records efficiently.</p>
+                        <a href="#" data-module="clinic-management" class="btn-text learn-more-btn">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="module-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                </div>
+                <div class="module-card primary-theme gs-reveal">
+                    <div class="module-content">
+                        <h3>Hospital Management (HIMS)</h3>
+                        <p>Comprehensive solution for multi-specialty hospitals. Includes IPD, OPD, OT management, and
+                            more.</p>
+                        <a href="#" data-module="hims" class="btn-text learn-more-btn">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="module-icon"><i class="fa-solid fa-hospital-user"></i></div>
+                </div>
+                <div class="module-card gs-reveal">
+                    <div class="module-content">
+                        <h3>Medical Practice Software</h3>
+                        <p>Designed for specialized practices with custom templates and workflow automation.</p>
+                        <a href="#" data-module="medical-practice" class="btn-text learn-more-btn">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="module-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                </div>
+                <div class="module-card gs-reveal">
+                    <div class="module-content">
+                        <h3>Clinic Chain Management</h3>
+                        <p>Centralized control for multiple branches. Real-time analytics and consolidated reporting.
+                        </p>
+                        <a href="#" data-module="clinic-chain" class="btn-text learn-more-btn">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="module-icon"><i class="fa-solid fa-network-wired"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module Modal -->
+    <div class="modal-overlay" id="moduleModal">
+        <div class="login-modal"
+            style="max-width: 900px; padding: 0; text-align: left; overflow: hidden; display: flex; flex-direction: column;">
+            <div class="login-header"
+                style="padding: 20px 30px; border-bottom: 1px solid #f0f0f0; margin-bottom: 0; display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="margin: 0; color: var(--primary);"><i class="fa-solid fa-circle-info"></i> Module Details
+                </h3>
+                <button class="close-modal" id="closeModule"
+                    style="position: static; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: #f1f5f9; border-radius: 50%;"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" style="padding: 0; max-height: 70vh; overflow-y: auto;">
+
+                <!-- Clinic Management -->
+                <div class="module-detail-section module-pane" id="pane-clinic-management"
+                    style="display: none; padding: 40px; border-bottom: none; background: white;">
+                    <div class="module-detail-grid">
+                        <div class="module-detail-content">
+                            <h2>Clinic Management Software</h2>
+                            <p>Designed perfectly for solo practitioners and small to medium sized clinics. Our Clinic
+                                Management system streamlines your front desk, manages all patient appointments, and
+                                handles seamless billing without any complex workflows.</p>
+                            <ul class="module-detail-features">
+                                <li><i class="fa-solid fa-calendar-check"></i> Smart Scheduling</li>
+                                <li><i class="fa-solid fa-file-invoice"></i> Simple Billing</li>
+                                <li><i class="fa-solid fa-notes-medical"></i> Basic EMR</li>
+                                <li><i class="fa-solid fa-user-injured"></i> Patient Portal</li>
+                                <li><i class="fa-solid fa-pills"></i> E-Prescriptions</li>
+                                <li><i class="fa-solid fa-mobile-screen"></i> SMS Reminders</li>
+                            </ul>
+                        </div>
+                        <div class="module-detail-img">
+                            <img src="https://images.pexels.com/photos/7089401/pexels-photo-7089401.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Clinic Management" style="width: 100%; border-radius: 12px;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hospital Management (HIMS) -->
+                <div class="module-detail-section module-pane" id="pane-hims"
+                    style="display: none; padding: 40px; border-bottom: none; background: white;">
+                    <div class="module-detail-grid">
+                        <div class="module-detail-img" style="order: -1;">
+                            <img src="https://images.pexels.com/photos/2324837/pexels-photo-2324837.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Hospital Management System" style="width: 100%; border-radius: 12px;">
+                        </div>
+                        <div class="module-detail-content">
+                            <h2>Hospital Management (HIMS)</h2>
+                            <p>A highly scalable, multi-specialty hospital management system built for large facilities.
+                                It bridges the gap between OP and IP departments while ensuring precise data tracking
+                                across lab, pharmacy, OT, and wards.</p>
+                            <ul class="module-detail-features">
+                                <li><i class="fa-solid fa-bed"></i> IPD/OPD Management</li>
+                                <li><i class="fa-solid fa-flask"></i> LIS Integration</li>
+                                <li><i class="fa-solid fa-procedures"></i> OT Management</li>
+                                <li><i class="fa-solid fa-prescription-bottle-medical"></i> Pharmacy Stock</li>
+                                <li><i class="fa-solid fa-users-viewfinder"></i> Staff Roster</li>
+                                <li><i class="fa-solid fa-chart-line"></i> Advanced Analytics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medical Practice Software -->
+                <div class="module-detail-section module-pane" id="pane-medical-practice"
+                    style="display: none; padding: 40px; border-bottom: none; background: white;">
+                    <div class="module-detail-grid">
+                        <div class="module-detail-content">
+                            <h2>Medical Practice Software</h2>
+                            <p>Take your specialty practice to the next level with customized templates for cardiology,
+                                dermatology, pediatrics, and more. Highly intuitive workflow automations tailored
+                                specifically for modern doctors.</p>
+                            <ul class="module-detail-features">
+                                <li><i class="fa-solid fa-pen-to-square"></i> Custom Templates</li>
+                                <li><i class="fa-solid fa-camera"></i> Image Management</li>
+                                <li><i class="fa-solid fa-microphone"></i> Voice to Text EMR</li>
+                                <li><i class="fa-solid fa-heart-pulse"></i> Vitals Tracking</li>
+                                <li><i class="fa-solid fa-file-medical"></i> Lab Result Sync</li>
+                                <li><i class="fa-solid fa-shield-halved"></i> HIPAA Compliant</li>
+                            </ul>
+                        </div>
+                        <div class="module-detail-img">
+                            <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Medical Practice Software" style="width: 100%; border-radius: 12px;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clinic Chain Management -->
+                <div class="module-detail-section module-pane" id="pane-clinic-chain"
+                    style="display: none; padding: 40px; border-bottom: none; background: white;">
+                    <div class="module-detail-grid">
+                        <div class="module-detail-img" style="order: -1;">
+                            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Clinic Chain Management" style="width: 100%; border-radius: 12px;">
+                        </div>
+                        <div class="module-detail-content">
+                            <h2>Clinic Chain Management</h2>
+                            <p>Centralize your operations across multiple branches and cities. Provides top-down control
+                                for regional directors to monitor financial and clinical performance seamlessly on a
+                                master dashboard.</p>
+                            <ul class="module-detail-features">
+                                <li><i class="fa-solid fa-tower-broadcast"></i> Central Data Hub</li>
+                                <li><i class="fa-solid fa-code-branch"></i> Multi-Branch Sync</li>
+                                <li><i class="fa-solid fa-boxes-stacked"></i> Central Procurement</li>
+                                <li><i class="fa-solid fa-users"></i> Global Patient ID</li>
+                                <li><i class="fa-solid fa-chart-pie"></i> Consolidated Reports</li>
+                                <li><i class="fa-solid fa-user-shield"></i> Role-Based Access</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Telemedicine Platform -->
+                <div class="module-detail-section module-pane" id="pane-telemedicine"
+                    style="display: none; padding: 40px; border-bottom: none; background: white;">
+                    <div class="module-detail-grid">
+                        <div class="module-detail-content">
+                            <h2>Built-in Telemedicine Platform</h2>
+                            <p>Connect with patients remotely using our integrated HD video consultation platform
+                                without relying on third-party apps. Provide high-quality care securely from anywhere.
+                            </p>
+                            <ul class="module-detail-features">
+                                <li><i class="fa-solid fa-video"></i> HD Video Consultation</li>
+                                <li><i class="fa-solid fa-credit-card"></i> Secure Online Payments</li>
+                                <li><i class="fa-solid fa-prescription-bottle-medical"></i> Instant E-Prescriptions</li>
+                                <li><i class="fa-solid fa-display"></i> Screen Sharing for Reports</li>
+                                <li><i class="fa-solid fa-calendar-check"></i> Seamless Scheduling</li>
+                                <li><i class="fa-solid fa-notes-medical"></i> EHR Integration</li>
+                            </ul>
+                        </div>
+                        <div class="module-detail-img">
+                            <img src="https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Telemedicine Platform" style="width: 100%; border-radius: 12px;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROI Detailed Breakdown -->
+                <div class="module-detail-section module-pane" id="pane-roi-breakdown"
+                    style="display: none; padding: 40px; border-bottom: none; background: white;">
+                    <div class="module-detail-grid">
+                        <div class="module-detail-content">
+                            <h2>ROI Detailed Breakdown</h2>
+                            <p>Here is a detailed look at how HIMS saves your facility time and money every month
+                                through automation and reduced administrative overhead.</p>
+                            <ul class="module-detail-features">
+                                <li><i class="fa-solid fa-clock"></i> <strong>Front Desk:</strong> 40+ hours saved</li>
+                                <li><i class="fa-solid fa-file-invoice-dollar"></i> <strong>Billing:</strong> 35+ hours
+                                    saved</li>
+                                <li><i class="fa-solid fa-boxes-stacked"></i> <strong>Inventory:</strong> Zero Wastage
+                                </li>
+                                <li><i class="fa-solid fa-notes-medical"></i> <strong>Records:</strong> 100% Digital
+                                </li>
+                                <li><i class="fa-solid fa-money-bill-trend-up"></i> <strong>Revenue:</strong> ~12% Boost
+                                </li>
+                                <li><i class="fa-solid fa-paper-plane"></i> <strong>Comms:</strong> 60% Cost Reduction
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="module-detail-img">
+                            <img src="https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="ROI Breakdown" style="width: 100%; border-radius: 12px;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feat: Appointment -->
+                <div class="module-detail-section module-pane" id="pane-feat-appointment"
+                    style="display: none; padding: 40px; border-bottom: none; background: white;">
+                    <div class="module-detail-grid">
+                        <div class="module-detail-content">
+                            <h2>Appointment Scheduling</h2>
+                            <p>Streamline patient flow and eliminate double-booking with our intelligent calendar
+                                system.</p>
+                            <ul class="module-detail-features">
+                                <li><i class="fa-regular fa-calendar-check color-primary"></i> 24/7 Portal Booking</li>
+                                <li><i class="fa-solid fa-bell color-primary"></i> Automated Reminders</li>
+                                <li><i class="fa-solid fa-user-doctor color-primary"></i> Doctor Avail. Sync</li>
+                                <li><i class="fa-solid fa-list-ol color-primary"></i> Smart Waitlists</li>
+                            </ul>
+                        </div>
+                        <div class="module-detail-img">
+                            <img src="https://images.pexels.com/photos/7089401/pexels-photo-7089401.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Scheduling"
+                                style="width: 100%; border-radius: 12px; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feat: Billing -->
+                <div class="module-detail-section module-pane" id="pane-feat-billing"
+                    style="display: none; padding: 40px; border-bottom: none; background: white;">
+                    <div class="module-detail-grid">
+                        <div class="module-detail-content">
+                            <h2>Billing & Payments</h2>
+                            <p>Accelerate your revenue cycle and reduce claims denials with automated billing workflows.
+                            </p>
+                            <ul class="module-detail-features">
+                                <li><i class="fa-solid fa-file-invoice-dollar color-primary"></i> Instant Invoices</li>
+                                <li><i class="fa-brands fa-cc-visa color-primary"></i> Secure Gateway</li>
+                                <li><i class="fa-solid fa-file-shield color-primary"></i> Claims Management</li>
+                                <li><i class="fa-solid fa-chart-pie color-primary"></i> Revenue Analytics</li>
+                            </ul>
+                        </div>
+                        <div class="module-detail-img">
+                            <img src="https://images.pexels.com/photos/4386339/pexels-photo-4386339.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Billing"
+                                style="width: 100%; border-radius: 12px; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feat: EMR -->
+                <div class="module-detail-section module-pane" id="pane-feat-emr"
+                    style="display: none; padding: 40px; border-bottom: none; background: white;">
+                    <div class="module-detail-grid">
+                        <div class="module-detail-content">
+                            <h2>Electronic Medical Records</h2>
+                            <p>Give your doctors a comprehensive, unified view of a patient's entire medical history
+                                instantly.</p>
+                            <ul class="module-detail-features">
+                                <li><i class="fa-solid fa-folder-open color-primary"></i> Unified Patient History</li>
+                                <li><i class="fa-solid fa-prescription-bottle-medical color-primary"></i> E-Prescription
+                                    Sys.</li>
+                                <li><i class="fa-solid fa-file-medical color-primary"></i> Clinical Notes</li>
+                                <li><i class="fa-solid fa-lock color-primary"></i> HIPAA Storage</li>
+                            </ul>
+                        </div>
+                        <div class="module-detail-img">
+                            <img src="https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="EMR" style="width: 100%; border-radius: 12px; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feat: Lab -->
+                <div class="module-detail-section module-pane" id="pane-feat-lab"
+                    style="display: none; padding: 40px; border-bottom: none; background: white;">
+                    <div class="module-detail-grid">
+                        <div class="module-detail-content">
+                            <h2>Lab Management System</h2>
+                            <p>Automate your lab operations from sample collection to report generation and delivery.
+                            </p>
+                            <ul class="module-detail-features">
+                                <li><i class="fa-solid fa-flask-vial color-primary"></i> Sample Barcoding</li>
+                                <li><i class="fa-solid fa-microscope color-primary"></i> Auto-fetch Results</li>
+                                <li><i class="fa-solid fa-file-pdf color-primary"></i> PDF Generation</li>
+                                <li><i class="fa-solid fa-paper-plane color-primary"></i> Auto-Emails</li>
+                            </ul>
+                        </div>
+                        <div class="module-detail-img">
+                            <img src="https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Lab" style="width: 100%; border-radius: 12px; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feat: Pharmacy -->
+                <div class="module-detail-section module-pane" id="pane-feat-pharmacy"
+                    style="display: none; padding: 40px; border-bottom: none; background: white;">
+                    <div class="module-detail-grid">
+                        <div class="module-detail-content">
+                            <h2>Pharmacy Management</h2>
+                            <p>Keep your pharmacy stocked optimally and process prescriptions incredibly fast.</p>
+                            <ul class="module-detail-features">
+                                <li><i class="fa-solid fa-boxes-stacked color-primary"></i> Real-time Tracking</li>
+                                <li><i class="fa-solid fa-triangle-exclamation color-primary"></i> Expiry Alerts</li>
+                                <li><i class="fa-solid fa-barcode color-primary"></i> Barcode Scanning</li>
+                                <li><i class="fa-solid fa-truck color-primary"></i> PO Management</li>
+                            </ul>
+                        </div>
+                        <div class="module-detail-img">
+                            <img src="https://images.pexels.com/photos/3652097/pexels-photo-3652097.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Pharmacy"
+                                style="width: 100%; border-radius: 12px; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feat: Inventory -->
+                <div class="module-detail-section module-pane" id="pane-feat-inventory"
+                    style="display: none; padding: 40px; border-bottom: none; background: white;">
+                    <div class="module-detail-grid">
+                        <div class="module-detail-content">
+                            <h2>Inventory Management</h2>
+                            <p>Ensure your hospital always has the necessary medical supplies, without cash
+                                overstocking.</p>
+                            <ul class="module-detail-features">
+                                <li><i class="fa-solid fa-list-check color-primary"></i> Multi-store Mgmt</li>
+                                <li><i class="fa-solid fa-arrow-right-arrow-left color-primary"></i> Dept. Transfers
+                                </li>
+                                <li><i class="fa-solid fa-calculator color-primary"></i> AI Consumption AI</li>
+                                <li><i class="fa-solid fa-file-signature color-primary"></i> Approval Workflows</li>
+                            </ul>
+                        </div>
+                        <div class="module-detail-img">
+                            <img src="https://images.pexels.com/photos/6169002/pexels-photo-6169002.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Inventory"
+                                style="width: 100%; border-radius: 12px; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feat: IPD -->
+                <div class="module-detail-section module-pane" id="pane-feat-ipd"
+                    style="display: none; padding: 40px; border-bottom: none; background: white;">
+                    <div class="module-detail-grid">
+                        <div class="module-detail-content">
+                            <h2>In-Patient (IPD)</h2>
+                            <p>Handle admissions, bed allocations, ward management, and discharge summaries flawlessly.
+                            </p>
+                            <ul class="module-detail-features">
+                                <li><i class="fa-solid fa-bed color-primary"></i> Live Bed View</li>
+                                <li><i class="fa-solid fa-notes-medical color-primary"></i> Nursing Notes</li>
+                                <li><i class="fa-solid fa-heart-pulse color-primary"></i> Vitals Integration</li>
+                                <li><i class="fa-solid fa-file-export color-primary"></i> 1-Click Discharges</li>
+                            </ul>
+                        </div>
+                        <div class="module-detail-img">
+                            <img src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="IPD" style="width: 100%; border-radius: 12px; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feat: OPD -->
+                <div class="module-detail-section module-pane" id="pane-feat-opd"
+                    style="display: none; padding: 40px; border-bottom: none; background: white;">
+                    <div class="module-detail-grid">
+                        <div class="module-detail-content">
+                            <h2>Out-Patient (OPD)</h2>
+                            <p>Speed up the registration and consultation process for walk-in and scheduled patients.
+                            </p>
+                            <ul class="module-detail-features">
+                                <li><i class="fa-solid fa-id-card color-primary"></i> Quick Registration</li>
+                                <li><i class="fa-solid fa-ticket color-primary"></i> Token Management</li>
+                                <li><i class="fa-solid fa-user-doctor color-primary"></i> Rx Console</li>
+                                <li><i class="fa-solid fa-money-bill color-primary"></i> Counter Billing</li>
+                            </ul>
+                        </div>
+                        <div class="module-detail-img">
+                            <img src="https://images.pexels.com/photos/6620025/pexels-photo-6620025.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="OPD" style="width: 100%; border-radius: 12px; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detailed Features Grid -->
+    <section class="features-detailed section-padding bg-light" id="features">
+        <div class="container">
+            <div class="section-title text-center gs-reveal">
+                <h2>Targeted Solutions</h2>
+                <p>Everything you need to automate your hospital, from admission to discharge.</p>
+            </div>
+            <div class="grid grid-4 features-grid">
+                <a href="#" class="feat-box hover-lift gs-reveal learn-more-btn" data-module="feat-appointment"
+                    style="text-decoration: none; color: inherit; display: block;"><i
+                        class="fa-regular fa-calendar-check"></i>
+                    <h4>Appointment Scheduling</h4>
+                </a>
+                <a href="#" class="feat-box hover-lift gs-reveal learn-more-btn" data-module="feat-billing"
+                    style="text-decoration: none; color: inherit; display: block;"><i
+                        class="fa-solid fa-file-invoice-dollar"></i>
+                    <h4>Billing & Payments</h4>
+                </a>
+                <a href="#" class="feat-box hover-lift gs-reveal learn-more-btn" data-module="feat-emr"
+                    style="text-decoration: none; color: inherit; display: block;"><i
+                        class="fa-solid fa-laptop-medical"></i>
+                    <h4>Electronic Medical Records</h4>
+                </a>
+                <a href="#" class="feat-box hover-lift gs-reveal learn-more-btn" data-module="feat-lab"
+                    style="text-decoration: none; color: inherit; display: block;"><i class="fa-solid fa-flask"></i>
+                    <h4>Lab Management System</h4>
+                </a>
+                <a href="#" class="feat-box hover-lift gs-reveal learn-more-btn" data-module="feat-pharmacy"
+                    style="text-decoration: none; color: inherit; display: block;"><i class="fa-solid fa-capsules"></i>
+                    <h4>Pharmacy Management</h4>
+                </a>
+                <a href="#" class="feat-box hover-lift gs-reveal learn-more-btn" data-module="feat-inventory"
+                    style="text-decoration: none; color: inherit; display: block;"><i
+                        class="fa-solid fa-boxes-stacked"></i>
+                    <h4>Inventory Management</h4>
+                </a>
+                <a href="#" class="feat-box hover-lift gs-reveal learn-more-btn" data-module="feat-ipd"
+                    style="text-decoration: none; color: inherit; display: block;"><i class="fa-solid fa-bed-pulse"></i>
+                    <h4>In-Patient (IPD)</h4>
+                </a>
+                <a href="#" class="feat-box hover-lift gs-reveal learn-more-btn" data-module="feat-opd"
+                    style="text-decoration: none; color: inherit; display: block;"><i class="fa-solid fa-door-open"></i>
+                    <h4>Out-Patient (OPD)</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telemedicine -->
+    <section class="telemedicine section-padding" id="telemedicine">
+        <div class="container tele-container">
+            <div class="tele-text gs-reveal">
+                <h2>Built-in Telemedicine Platform</h2>
+                <p>Connect with patients remotely using our integrated HD video consultation platform without relying on
+                    third-party apps.</p>
+                <ul class="check-list">
+                    <li><i class="fa-solid fa-check-circle color-primary"></i> HD Video Consultation</li>
+                    <li><i class="fa-solid fa-check-circle color-primary"></i> Online Payments securely</li>
+                    <li><i class="fa-solid fa-check-circle color-primary"></i> E-Prescriptions instantly</li>
+                    <li><i class="fa-solid fa-check-circle color-primary"></i> Screen Sharing for Reports</li>
+                </ul>
+                <a href="#" data-module="telemedicine" class="btn btn-primary mt-4 learn-more-btn">Explore
+                    Telemedicine</a>
+            </div>
+            <div class="tele-visual gs-reveal">
+                <div class="video-ui glass-card">
+                    <img src="https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="Doctor Consultation" class="video-bg" id="mainVideo">
+
+                    <!-- AI Voice Overlay -->
+                    <div class="ai-voice-overlay" id="aiVoiceOverlay">
+                        <div class="voice-indicator" id="voiceIndicator">
+                            <i class="fa-solid fa-microphone-lines"></i> <span id="voiceStatus">Click Mic to Speak with
+                                AI Doctor</span>
+                        </div>
+                        <div class="doctor-caption" id="doctorCaption">
+                            "Hello, how can I assist you today?"
+                        </div>
+                    </div>
+
+                    <div class="video-controls glass">
+                        <button class="ctrl-btn" id="micBtn"><i class="fa-solid fa-microphone"></i></button>
+                        <button class="ctrl-btn" id="camBtn"><i class="fa-solid fa-video"></i></button>
+                        <button class="ctrl-btn end-call" id="endBtn"><i class="fa-solid fa-phone-slash"></i></button>
+                    </div>
+                    <div class="patient-camera" id="patientCam">
+                        <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=200"
+                            alt="Patient">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Preview -->
+    <section class="dashboard-preview section-padding text-center" style="background-color: #ffeed4;">
+        <div class="container container-sm">
+            <div class="section-title gs-reveal">
+                <h2>Real-Time Analytics & Insights</h2>
+                <p style="color: var(--text-light);">Make data-driven decisions with detailed dashboards, revenue
+                    graphs, doctor
+                    activity logs, and patient statistics.</p>
+            </div>
+
+            <div class="stats-counter grid grid-4 pt-4 pb-5 gs-reveal">
+                <div>
+                    <h3 class="counter" data-target="250">0</h3><span class="suffix">+</span>
+                    <p>Daily Patients</p>
+                </div>
+                <div>
+                    <h3 class="counter" data-target="98">0</h3><span class="suffix">%</span>
+                    <p>Patient Satisfaction</p>
+                </div>
+                <div>
+                    <h3 class="counter" data-target="150">0</h3><span class="suffix">k+</span>
+                    <p>Consultations</p>
+                </div>
+                <div>
+                    <h3 class="counter" data-target="12">0</h3><span class="suffix">hrs</span>
+                    <p>Time Saved/Week</p>
+                </div>
+            </div>
+
+            <div class="dash-img-wrapper gs-reveal">
+                <div class="glass-card dash-mock">
+                    <div class="chart-bars">
+                        <div class="bar" style="height: 40%"><span>Mon</span></div>
+                        <div class="bar" style="height: 60%"><span>Tue</span></div>
+                        <div class="bar" style="height: 80%"><span>Wed</span></div>
+                        <div class="bar" style="height: 50%"><span>Thu</span></div>
+                        <div class="bar" style="height: 90%"><span>Fri</span></div>
+                        <div class="bar" style="height: 70%"><span>Sat</span></div>
+                        <div class="bar" style="height: 30%"><span>Sun</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="roi-section section-padding bg-light">
+        <div class="container">
+            <div class="roi-container glass-card gs-reveal">
+                <div class="roi-text">
+                    <h2>Calculate Your ROI</h2>
+                    <p>See how much time and money HIMS can save your facility by reducing manual work.</p>
+                    <div class="roi-input-group">
+                        <label>Number of Doctors</label>
+                        <input type="range" id="docSlider" min="1" max="50" value="5">
+                        <span id="docCount">5</span>
+                    </div>
+                    <div class="roi-input-group">
+                        <label>Daily Patients per Doctor</label>
+                        <input type="range" id="patSlider" min="10" max="100" value="30">
+                        <span id="patCount">30</span>
+                    </div>
+                </div>
+                <div class="roi-result">
+                    <p>Estimated Monthly Savings</p>
+                    <h2 class="color-primary" id="savingsAmount">₹4,50,000</h2>
+                    <p class="small-text">+ 120 hours of administrative work saved.</p>
+                    <a href="#" data-module="roi-breakdown" class="btn btn-primary mt-3 learn-more-btn">See Detailed
+                        Breakdown</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Intelligence Section -->
+    <section class="ai-intelligence section-padding text-center" style="background-color: #ffeed4;"
+        id="ai-intelligence">
+        <div class="container container-sm text-center gs-reveal">
+            <div class="badge"
+                style="background: var(--white); color: var(--primary); border: 1px solid var(--primary);">✨ Future of
+                Healthcare</div>
+            <h2 style="color: var(--dark); margin-top: 15px;">AI-Powered Hospital Intelligence</h2>
+            <p style="color: var(--text-light); margin-top: 15px;">Leverage our proprietary machine learning algorithms
+                to predict patient flow, manage resources, and automatically assist with diagnostics.</p>
+        </div>
+
+        <div class="container">
+            <div class="grid grid-3 pt-5 gs-reveal">
+                <!-- AI Feature 1 -->
+                <div class="ai-card glass-card hover-lift"
+                    style="background: var(--white); border: 1px solid #f1f5f9; box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 40px 30px; border-radius: 20px; text-align: left; position: relative; overflow: hidden;">
+                    <div class="ai-glow"
+                        style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: var(--secondary); filter: blur(70px); opacity: 0.3; border-radius: 50%;">
+                    </div>
+                    <div class="ai-icon" style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 20px;">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 style="color: var(--dark); margin-bottom: 15px; font-size: 1.4rem;">Predictive Admission</h3>
+                    <p style="color: var(--text-light);">AI analyzes historical data and seasonal trends to predict OPD
+                        walk-ins and IPD admissions with 94% accuracy, ensuring you are never understaffed.</p>
+                </div>
+
+                <!-- AI Feature 2 -->
+                <div class="ai-card glass-card hover-lift"
+                    style="background: var(--white); border: 1px solid #f1f5f9; box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 40px 30px; border-radius: 20px; text-align: left; position: relative; overflow: hidden; transform: translateY(-20px);">
+                    <div class="ai-glow"
+                        style="position: absolute; bottom: -50px; left: -50px; width: 150px; height: 150px; background: var(--primary); filter: blur(70px); opacity: 0.4; border-radius: 50%;">
+                    </div>
+                    <div class="ai-icon" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;">
+                        <i class="fa-solid fa-file-waveform"></i>
+                    </div>
+                    <h3 style="color: var(--dark); margin-bottom: 15px; font-size: 1.4rem;">Smart Auto-Coding</h3>
+                    <p style="color: var(--text-light);">Natural Language Processing (NLP) automatically scans doctor's
+                        clinical notes to suggest accurate ICD-10 diagnostic and billing codes instantly.</p>
+                </div>
+
+                <!-- AI Feature 3 -->
+                <div class="ai-card glass-card hover-lift"
+                    style="background: var(--white); border: 1px solid #f1f5f9; box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 40px 30px; border-radius: 20px; text-align: left; position: relative; overflow: hidden;">
+                    <div class="ai-glow"
+                        style="position: absolute; top: 50%; right: -50px; width: 150px; height: 150px; background: #10B981; filter: blur(70px); opacity: 0.2; border-radius: 50%;">
+                    </div>
+                    <div class="ai-icon" style="font-size: 2.5rem; color: #10B981; margin-bottom: 20px;">
+                        <i class="fa-solid fa-pills"></i>
+                    </div>
+                    <h3 style="color: var(--dark); margin-bottom: 15px; font-size: 1.4rem;">Inventory Forecasting</h3>
+                    <p style="color: var(--text-light);">Stop stock-outs and expiry waste. The system dynamically
+                        predicts pharmaceutical demands based on real-time prescription velocity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing section-padding bg-light" id="pricing">
+        <div class="container gs-reveal">
+            <div class="section-title text-center">
+                <h2>Simple &amp; Transparent Pricing</h2>
+                <p>Choose the perfect plan for your healthcare facility.</p>
+            </div>
+
+            <div class="grid grid-3 pricing-grid pt-4">
+                <div class="pricing-card glass-card hover-lift">
+                    <h4>Basic Clinic</h4>
+                    <h2>₹4,999<span style="font-size: 1rem; color: #64748B;">/mo</span></h2>
+                    <p style="color: #64748B;">Perfect for solo practitioners</p>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check color-success"></i> Up to 2 Doctors</li>
+                        <li><i class="fa-solid fa-check color-success"></i> Basic EMR &amp; Billing</li>
+                        <li><i class="fa-solid fa-check color-success"></i> 500 Patients / mo</li>
+                        <li><i class="fa-solid fa-xmark color-danger"></i> Telemedicine</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-block">Start Free Trial</a>
+                </div>
+
+                <div class="pricing-card glass-card hover-lift popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h4>Multi-Specialty</h4>
+                    <h2>₹14,999<span style="font-size: 1rem; color: #64748B;">/mo</span></h2>
+                    <p style="color: #64748B;">Ideal for growing clinics</p>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check color-success"></i> Up to 10 Doctors</li>
+                        <li><i class="fa-solid fa-check color-success"></i> Advanced EMR &amp; Lab</li>
+                        <li><i class="fa-solid fa-check color-success"></i> Unlimited Patients</li>
+                        <li><i class="fa-solid fa-check color-success"></i> Telemedicine Included</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-block">Start Free Trial</a>
+                </div>
+
+                <div class="pricing-card glass-card hover-lift">
+                    <h4>Enterprise HIMS</h4>
+                    <h2>Custom</h2>
+                    <p style="color: #64748B;">For large hospitals</p>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check color-success"></i> Unlimited Doctors</li>
+                        <li><i class="fa-solid fa-check color-success"></i> IPD/OPD &amp; Pharmacy</li>
+                        <li><i class="fa-solid fa-check color-success"></i> Custom Analytics</li>
+                        <li><i class="fa-solid fa-check color-success"></i> Dedicated Account Manager</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-block">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section-padding">
+        <div class="container">
+            <div class="section-title text-center gs-reveal">
+                <h2>Trusted by Healthcare Leaders</h2>
+            </div>
+            <div class="grid grid-3 testimonial-grid">
+                <div class="testi-card glass-card gs-reveal">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
+                    <p>"HIMS transformed how we manage our 50-bed hospital. The billing is automated, and doctors
+                        love the intuitive EMR interface."</p>
+                    <div class="author">
+                        <img src="https://i.pravatar.cc/100?img=4" alt="Doctor">
+                        <div>
+                            <h4>Dr. James Wilson</h4>
+                            <span>Chief Medical Officer, City Care</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card glass-card gs-reveal">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
+                    <p>"The telemedicine feature is flawless. It integrated perfectly with our scheduling, and patients
+                        find it very easy to join calls."</p>
+                    <div class="author">
+                        <img src="https://i.pravatar.cc/100?img=5" alt="Doctor">
+                        <div>
+                            <h4>Dr. Emily Chen</h4>
+                            <span>Pediatrician, Wellness Clinic</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card glass-card gs-reveal">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
+                    <p>"Inventory and pharmacy management used to be a nightmare. Thanks to HIMS, we have zero
+                        stock-outs and lower wastage."</p>
+                    <div class="author">
+                        <img src="https://i.pravatar.cc/100?img=6" alt="Doctor">
+                        <div>
+                            <h4>Mark Roberts</h4>
+                            <span>Pharmacy Director, HealthPlus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog / Insights -->
+    <section class="blog section-padding bg-light">
+        <div class="container">
+            <div class="section-title d-flex-between gs-reveal">
+                <div>
+                    <h2>Latest Insights</h2>
+                    <p>News and tips from the healthcare tech world.</p>
+                </div>
+                <a href="#" class="btn btn-outline" id="viewAllPostsBtn">View All Posts</a>
+            </div>
+            <div class="grid grid-3 pt-3">
+                <article class="blog-card glass-card gs-reveal">
+                    <img src="https://images.pexels.com/photos/5452204/pexels-photo-5452204.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="Hospital Software Trends" class="img-placeholder" style="object-fit: cover;">
+                    <div class="blog-content">
+                        <span class="tag">Trends</span>
+                        <h4>Top 5 Hospital Software Trends in 2026</h4>
+                        <p>Discover how AI and cloud computing are reshaping hospital management.</p>
+                        <a href="#" class="read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card glass-card gs-reveal">
+                    <img src="https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="ROI of HIMS" class="img-placeholder" style="object-fit: cover;">
+                    <div class="blog-content">
+                        <span class="tag">ROI</span>
+                        <h4>Measuring the True ROI of an HIMS</h4>
+                        <p>It's not just about cost savings. Here is how HIMS improves overall efficiency.</p>
+                        <a href="#" class="read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card glass-card gs-reveal">
+                    <img src="https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="HIPAA Compliance" class="img-placeholder" style="object-fit: cover;">
+                    <div class="blog-content">
+                        <span class="tag">Security</span>
+                        <h4>HIPAA Compliance & Data Security Tips</h4>
+                        <p>Best practices for keeping patient data safe from cyber threats.</p>
+                        <a href="#" class="read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section section-padding bg-light" id="location">
+        <div class="container">
+            <div class="section-title text-center gs-reveal">
+                <h2>Our Location</h2>
+                <p>Visit our global headquarters or get in touch with our team.</p>
+            </div>
+            <div class="location-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: stretch;">
+                <div class="location-info gs-reveal"
+                    style="display: flex; flex-direction: column; justify-content: space-between; gap: 20px;">
+                    <a href="https://maps.google.com/maps?q=Shirpur,%20Maharashtra" target="_blank"
+                        class="info-card glass-card hover-lift"
+                        style="text-decoration: none; padding: 25px; border-radius: 12px; display: flex; align-items: flex-start; gap: 15px;">
+                        <i class="fa-solid fa-location-dot"
+                            style="font-size: 1.5rem; color: var(--primary); margin-top: 5px;"></i>
+                        <div>
+                            <h4 style="margin-bottom: 5px; font-size: 1.1rem; color: var(--dark);">Headquarters</h4>
+                            <p style="color: var(--text-light); line-height: 1.5; font-size: 0.95rem;">HIMS Main
+                                Campus<br>Shirpur, Maharashtra, India</p>
+                        </div>
+                    </a>
+                    <a href="mailto:hello@hims-software.com" class="info-card glass-card hover-lift"
+                        style="text-decoration: none; padding: 25px; border-radius: 12px; display: flex; align-items: flex-start; gap: 15px;">
+                        <i class="fa-solid fa-envelope"
+                            style="font-size: 1.5rem; color: var(--primary); margin-top: 5px;"></i>
+                        <div>
+                            <h4 style="margin-bottom: 5px; font-size: 1.1rem; color: var(--dark);">Email Us</h4>
+                            <p style="color: var(--text-light); line-height: 1.5; font-size: 0.95rem;">
+                                hello@hims-software.com<br>support@hims-software.com</p>
+                        </div>
+                    </a>
+                    <a href="tel:+18001234567" class="info-card glass-card hover-lift"
+                        style="text-decoration: none; padding: 25px; border-radius: 12px; display: flex; align-items: flex-start; gap: 15px;">
+                        <i class="fa-solid fa-phone"
+                            style="font-size: 1.5rem; color: var(--primary); margin-top: 5px;"></i>
+                        <div>
+                            <h4 style="margin-bottom: 5px; font-size: 1.1rem; color: var(--dark);">Call Us</h4>
+                            <p style="color: var(--text-light); line-height: 1.5; font-size: 0.95rem;">+1 (800)
+                                123-4567<br>Mon - Fri, 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="location-map gs-reveal glass-card"
+                    style="border-radius: 12px; overflow: hidden; padding: 8px; min-height: 350px;">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Shirpur,%20Maharashtra&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="100%" style="border:0; border-radius: 8px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section-padding text-center text-white">
+        <div class="container container-sm gs-reveal">
+            <h2>Transform Your Hospital Digitally</h2>
+            <p>Join thousands of healthcare providers who trust HIMS to run their daily operations smoothly.</p>
+            <div class="mt-4">
+                <a href="#" class="btn btn-white btn-lg mr-2 text-primary">Get Demo Now</a>
+                <a href="#" class="btn btn-outline-white btn-lg">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-3 bg-dark text-white">
+        <div class="container">
+            <div class="grid grid-4 footer-grid">
+                <div class="footer-brand">
+                    <h3><i class="fa-solid fa-hospital"></i> HIMS</h3>
+                    <p>The smartest way to manage your healthcare facility. Cloud-based, secure, and scalable.</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">Clinic Management</a></li>
+                        <li><a href="#">Hospital (HIMS)</a></li>
+                        <li><a href="#">Pharmacy</a></li>
+                        <li><a href="#">Laboratory</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fa-solid fa-envelope"></i> hello@hims.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +1 (800) 123-4567</p>
+                    <p><i class="fa-solid fa-location-dot"></i> 123 Health Ave, SF, CA</p>
+                </div>
+            </div>
+            <div class="footer-bottom mt-5 text-center text-light-gray border-top pt-3">
+                <p>&copy; 2026 HIMS Inc. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Demo -->
+    <div class="chatbot-wrapper gs-reveal">
+        <button class="chat-toggle tooltip" data-tooltip="Need Help?"><i class="fa-solid fa-message"></i></button>
+        <div class="chat-window glass-card">
+            <div class="chat-head bg-gradient">
+                <h4>HIMS AI</h4>
+                <button class="close-chat"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="msg received">Hi! How can I help you today?</div>
+            </div>
+            <div class="chat-input" id="chatInput">
+                <input type="text" placeholder="Type a message..." id="chatMsg">
+                <button id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="login-modal">
+            <button class="close-modal" id="closeLogin"><i class="fa-solid fa-xmark"></i></button>
+            <div class="login-header">
+                <h3><i class="fa-solid fa-hospital"></i> HIMS</h3>
+                <p>Welcome back! Please login to your account.</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="admin@hims.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <div class="login-options">
+                    <label class="remember-me">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary login-btn-submit">Sign In</button>
+            </form>
+            <div class="login-footer">
+                Don't have an account? <a href="#" id="requestDemoLink">Request Demo</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Blog Modal -->
+    <div class="modal-overlay" id="blogModal">
+        <div class="login-modal"
+            style="max-width: 900px; padding: 30px; text-align: left; overflow-y: auto; max-height: 85vh;">
+            <div class="login-header"
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h3 style="margin: 0; color: var(--primary);"><i class="fa-solid fa-newspaper"></i> All Healthcare
+                    Insights</h3>
+                <button class="close-modal" id="closeBlog"
+                    style="position: static; transform: none; background: #f1f5f9; color: #333; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="grid grid-2" style="gap: 20px;">
+                <article class="blog-card glass-card" style="box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <img src="https://images.pexels.com/photos/5452204/pexels-photo-5452204.jpeg?auto=compress&cs=tinysrgb&w=400"
+                        alt="Trends" class="img-placeholder" style="height: 150px; object-fit: cover;">
+                    <div class="blog-content" style="padding: 20px;">
+                        <span class="tag" style="margin-bottom: 10px;">Trends</span>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Top 5 Hospital Software Trends in 2026</h4>
+                        <p style="font-size: 0.85rem; margin-bottom: 10px;">Discover how AI and cloud computing are
+                            reshaping hospital management.</p>
+                        <a href="#" class="read-more" style="font-size: 0.85rem;">Read Article <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card glass-card" style="box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <img src="https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400"
+                        alt="ROI" class="img-placeholder" style="height: 150px; object-fit: cover;">
+                    <div class="blog-content" style="padding: 20px;">
+                        <span class="tag" style="margin-bottom: 10px;">ROI</span>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Measuring the True ROI of an HIMS</h4>
+                        <p style="font-size: 0.85rem; margin-bottom: 10px;">It's not just about cost savings. Here is
+                            how HIMS improves overall efficiency.</p>
+                        <a href="#" class="read-more" style="font-size: 0.85rem;">Read Article <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card glass-card" style="box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <img src="https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=400"
+                        alt="Security" class="img-placeholder" style="height: 150px; object-fit: cover;">
+                    <div class="blog-content" style="padding: 20px;">
+                        <span class="tag" style="margin-bottom: 10px;">Security</span>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">HIPAA Compliance & Data Security Tips</h4>
+                        <p style="font-size: 0.85rem; margin-bottom: 10px;">Best practices for keeping patient data safe
+                            from cyber threats.</p>
+                        <a href="#" class="read-more" style="font-size: 0.85rem;">Read Article <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card glass-card" style="box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <img src="https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=400"
+                        alt="Telemedicine" class="img-placeholder" style="height: 150px; object-fit: cover;">
+                    <div class="blog-content" style="padding: 20px;">
+                        <span class="tag" style="margin-bottom: 10px;">Telehealth</span>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">The Rise of Virtual Consultations</h4>
+                        <p style="font-size: 0.85rem; margin-bottom: 10px;">Why telemedicine is here to stay in modern
+                            healthcare workflows.</p>
+                        <a href="#" class="read-more" style="font-size: 0.85rem;">Read Article <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card glass-card" style="box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <img src="https://images.pexels.com/photos/3845129/pexels-photo-3845129.jpeg?auto=compress&cs=tinysrgb&w=400"
+                        alt="Billing" class="img-placeholder" style="height: 150px; object-fit: cover;">
+                    <div class="blog-content" style="padding: 20px;">
+                        <span class="tag" style="margin-bottom: 10px;">Finance</span>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Automating Hospital Billing Systems</h4>
+                        <p style="font-size: 0.85rem; margin-bottom: 10px;">Reduce claims errors and speed up your
+                            revenue cycle effortlessly.</p>
+                        <a href="#" class="read-more" style="font-size: 0.85rem;">Read Article <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card glass-card" style="box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <img src="https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&w=400"
+                        alt="Patient Care" class="img-placeholder" style="height: 150px; object-fit: cover;">
+                    <div class="blog-content" style="padding: 20px;">
+                        <span class="tag" style="margin-bottom: 10px;">Care</span>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Improving Patient Experience digitally</h4>
+                        <p style="font-size: 0.85rem; margin-bottom: 10px;">Using secure patient portals to keep
+                            families informed and engaged.</p>
+                        <a href="#" class="read-more" style="font-size: 0.85rem;">Read Article <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Reader Modal -->
+    <div class="modal-overlay" id="articleModal">
+        <div class="login-modal"
+            style="max-width: 900px; padding: 0; text-align: left; overflow: hidden; display: flex; flex-direction: column;">
+            <div class="login-header"
+                style="padding: 20px 30px; border-bottom: 1px solid #f0f0f0; margin-bottom: 0; display: flex; justify-content: space-between; align-items: center; background: white; z-index: 10;">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <span class="tag" id="articleTag"
+                        style="margin: 0; background: rgba(15, 82, 186, 0.1); color: var(--primary); padding: 4px 12px; border-radius: 50px; font-weight: 600; font-size: 0.85rem;">Insights</span>
+                    <span style="color: #94a3b8; font-size: 0.9rem;"><i class="fa-solid fa-clock"></i> 5 min read</span>
+                </div>
+                <button class="close-modal" id="closeArticle"
+                    style="position: static; transform: none; background: #f1f5f9; color: #333; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" style="padding: 0; overflow-y: auto; max-height: 80vh; background: white;">
+                <div style="width: 100%; height: 350px; position: relative;">
+                    <img id="articleImage" src="" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px 30px 20px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
+                        <h2 id="articleTitle"
+                            style="font-size: 2.2rem; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                            Article Title</h2>
+                    </div>
+                </div>
+                <div
+                    style="padding: 40px 30px; line-height: 1.8; color: #334155; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
+                    <p id="articleExcerpt"
+                        style="font-size: 1.25rem; color: #0f172a; font-weight: 500; margin-bottom: 30px; border-left: 4px solid var(--primary); padding-left: 20px;">
+                        Excerpt</p>
+
+                    <p style="margin-bottom: 20px;">In today's rapidly evolving healthcare landscape, staying ahead of
+                        the technological curve is no longer a luxury—it's an absolute necessity. Medical facilities
+                        worldwide are facing unprecedented challenges regarding patient load, data security, and
+                        administrative overhead. The right digital tools offer an effective roadmap to overcome these
+                        hurdles, transforming how care is delivered and managed.</p>
+
+                    <p style="margin-bottom: 20px;">Implementing robust integrated solutions reduces the burden on
+                        healthcare professionals by bridging the gap between various departments. By centralizing data
+                        from the reception desk to the pharmacy, hospitals can ensure that crucial patient information
+                        is instantly available across the network. This eliminates duplicate data entry, minimizes
+                        clinical errors, and massively speeds up workflow operations.</p>
+
+                    <h3 style="margin: 30px 0 15px; color: var(--dark); font-size: 1.5rem;">Key Takeaways for Modern
+                        Clinics</h3>
+                    <ul class="check-list" style="list-style: none; padding: 0; margin-bottom: 30px;">
+                        <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;"><i
+                                class="fa-solid fa-check-circle color-primary"></i> Prioritize seamless user experiences
+                            for both patients and staff.</li>
+                        <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;"><i
+                                class="fa-solid fa-check-circle color-primary"></i> Automate standard operational
+                            procedures to increase daily ROI.</li>
+                        <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;"><i
+                                class="fa-solid fa-check-circle color-primary"></i> Secure all endpoints utilizing
+                            enterprise-grade encryption standard protocols.</li>
+                    </ul>
+
+                    <p style="margin-bottom: 20px;">As we move forward into a fully digital healthcare paradigm, taking
+                        the time to evaluate and securely transition legacy systems onto modern platforms will be the
+                        deciding factor of a clinic's long-term success and patient satisfaction ratings.</p>
+
+                    <div
+                        style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between;">
+                        <div></div>
+                        <div style="display: flex; gap: 10px;">
+                            <button id="shareArticleBtn" class="btn btn-outline"
+                                style="padding: 8px 15px; font-size: 0.9rem;"><i class="fa-solid fa-share-nodes"></i>
+                                Share</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Modal -->
+    <div class="modal-overlay" id="demoModal">
+        <div class="login-modal">
+            <button class="close-modal" id="closeDemo"><i class="fa-solid fa-xmark"></i></button>
+            <div class="login-header">
+                <h3>Request Live Demo</h3>
+                <p>See how HIMS can transform your facility.</p>
+            </div>
+            <form id="demoForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Dr. Sarah Johnson" required>
+                </div>
+                <div class="form-group">
+                    <label>Work Email</label>
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="sarah@hospital.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Hospital/Clinic Name</label>
+                    <i class="fa-solid fa-hospital"></i>
+                    <input type="text" placeholder="City Care Clinic" required>
+                </div>
+                <button type="submit" class="btn btn-primary login-btn-submit">Schedule Demo</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
