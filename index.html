@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="navbar glass">
+    <nav class="navbar">
         <div class="container nav-content">
             <div class="logo"><i class="fa-solid fa-hospital"></i> HIMS</div>
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu"><i
@@ -59,36 +59,9 @@
                 </div>
             </div>
             <div class="hero-visual gs-reveal">
-                <div class="mockup-container glass-card">
-                    <div class="mockup-header">
-                        <div class="dots"><span></span><span></span><span></span></div>
-                        <div class="mockup-title">HIMS Dashboard</div>
-                    </div>
-                    <div class="mockup-body">
-                        <div class="mockup-sidebar"></div>
-                        <div class="mockup-content">
-                            <div class="mockup-topbar"></div>
-                            <div class="mockup-stats">
-                                <div class="stat-box">
-                                    <div style="font-size: 10px; color: #64748B; padding: 10px 10px 0;">New Patients
-                                    </div>
-                                    <div style="font-size: 16px; font-weight: 700; padding: 0 10px;">+124</div>
-                                </div>
-                                <div class="stat-box">
-                                    <div style="font-size: 10px; color: #64748B; padding: 10px 10px 0;">Revenue</div>
-                                    <div style="font-size: 16px; font-weight: 700; color: #10B981; padding: 0 10px;">
-                                        $12.5k</div>
-                                </div>
-                                <div class="stat-box">
-                                    <div style="font-size: 10px; color: #64748B; padding: 10px 10px 0;">Consultations
-                                    </div>
-                                    <div style="font-size: 16px; font-weight: 700; padding: 0 10px;">342</div>
-                                </div>
-                            </div>
-                            <div class="mockup-chart"></div>
-                        </div>
-                    </div>
-                </div>
+                <img src="https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    alt="Hospital Facility"
+                    style="width: 100%; height: 450px; object-fit: cover; border-radius: 20px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1); border: 1px solid rgba(255, 255, 255, 0.5);">
                 <div class="floating-card c-1 glass-card">
                     <i class="fa-solid fa-calendar-check color-primary"></i>
                     <div>
@@ -215,6 +188,63 @@
                                 class="fa-solid fa-arrow-right"></i></a>
                     </div>
                     <div class="module-icon"><i class="fa-solid fa-network-wired"></i></div>
+                </div>
+                <!-- 6 New Added Modules -->
+                <div class="module-card gs-reveal">
+                    <div class="module-content">
+                        <h3>Laboratory Management System</h3>
+                        <p>Automate your lab operations from sample collection to report generation and delivery.</p>
+                        <a href="#" data-module="feat-lab" class="btn-text learn-more-btn">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="module-icon"><i class="fa-solid fa-flask"></i></div>
+                </div>
+                <div class="module-card gs-reveal">
+                    <div class="module-content">
+                        <h3>Pharmacy Management</h3>
+                        <p>Keep your pharmacy stocked optimally and process prescriptions incredibly fast.</p>
+                        <a href="#" data-module="feat-pharmacy" class="btn-text learn-more-btn">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="module-icon"><i class="fa-solid fa-capsules"></i></div>
+                </div>
+                <div class="module-card gs-reveal">
+                    <div class="module-content">
+                        <h3>Electronic Medical Records</h3>
+                        <p>Give your doctors a comprehensive, unified view of a patient's entire medical history
+                            instantly.</p>
+                        <a href="#" data-module="feat-emr" class="btn-text learn-more-btn">Learn More <i
+                                class="fa-solid fa-laptop-medical"></i></a>
+                    </div>
+                    <div class="module-icon"><i class="fa-solid fa-laptop-medical"></i></div>
+                </div>
+                <div class="module-card gs-reveal">
+                    <div class="module-content">
+                        <h3>Inventory Management</h3>
+                        <p>Ensure your hospital always has the necessary medical supplies, without cash overstocking.
+                        </p>
+                        <a href="#" data-module="feat-inventory" class="btn-text learn-more-btn">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="module-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                </div>
+                <div class="module-card gs-reveal">
+                    <div class="module-content">
+                        <h3>In-Patient (IPD)</h3>
+                        <p>Handle admissions, bed allocations, ward management, and discharge summaries flawlessly.</p>
+                        <a href="#" data-module="feat-ipd" class="btn-text learn-more-btn">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="module-icon"><i class="fa-solid fa-bed-pulse"></i></div>
+                </div>
+                <div class="module-card gs-reveal">
+                    <div class="module-content">
+                        <h3>Out-Patient (OPD)</h3>
+                        <p>Speed up the registration and consultation process for walk-in and scheduled patients.</p>
+                        <a href="#" data-module="feat-opd" class="btn-text learn-more-btn">Learn More <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="module-icon"><i class="fa-solid fa-door-open"></i></div>
                 </div>
             </div>
         </div>
@@ -621,7 +651,8 @@
     </section>
 
     <!-- Telemedicine -->
-    <section class="telemedicine section-padding" id="telemedicine">
+    <section class="telemedicine section-padding" id="telemedicine"
+        style="background-color: #fff7ed; border-top: 1px solid #ffedd5; border-bottom: 1px solid #ffedd5;">
         <div class="container tele-container">
             <div class="tele-text gs-reveal">
                 <h2>Built-in Telemedicine Platform</h2>
@@ -633,12 +664,12 @@
                     <li><i class="fa-solid fa-check-circle color-primary"></i> E-Prescriptions instantly</li>
                     <li><i class="fa-solid fa-check-circle color-primary"></i> Screen Sharing for Reports</li>
                 </ul>
-                <a href="#" data-module="telemedicine" class="btn btn-primary mt-4 learn-more-btn">Explore
-                    Telemedicine</a>
+                <button id="exploreTeleBtn" class="btn btn-primary mt-4">Explore Telemedicine</button>
             </div>
             <div class="tele-visual gs-reveal">
-                <div class="video-ui glass-card">
-                    <img src="https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=800"
+                <div class="video-ui glass-card" id="teleVideoUI">
+                    <button class="exit-fullscreen-btn" id="exitTeleBtn"><i class="fa-solid fa-xmark"></i></button>
+                    <img src="https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=1920"
                         alt="Doctor Consultation" class="video-bg" id="mainVideo">
 
                     <!-- AI Voice Overlay -->
@@ -666,134 +697,480 @@
         </div>
     </section>
 
-    <!-- Dashboard Preview -->
-    <section class="dashboard-preview section-padding text-center" style="background-color: #ffeed4;">
-        <div class="container container-sm">
-            <div class="section-title gs-reveal">
-                <h2>Real-Time Analytics & Insights</h2>
-                <p style="color: var(--text-light);">Make data-driven decisions with detailed dashboards, revenue
-                    graphs, doctor
-                    activity logs, and patient statistics.</p>
-            </div>
-
-            <div class="stats-counter grid grid-4 pt-4 pb-5 gs-reveal">
-                <div>
-                    <h3 class="counter" data-target="250">0</h3><span class="suffix">+</span>
-                    <p>Daily Patients</p>
-                </div>
-                <div>
-                    <h3 class="counter" data-target="98">0</h3><span class="suffix">%</span>
-                    <p>Patient Satisfaction</p>
-                </div>
-                <div>
-                    <h3 class="counter" data-target="150">0</h3><span class="suffix">k+</span>
-                    <p>Consultations</p>
-                </div>
-                <div>
-                    <h3 class="counter" data-target="12">0</h3><span class="suffix">hrs</span>
-                    <p>Time Saved/Week</p>
-                </div>
-            </div>
-
-            <div class="dash-img-wrapper gs-reveal">
-                <div class="glass-card dash-mock">
-                    <div class="chart-bars">
-                        <div class="bar" style="height: 40%"><span>Mon</span></div>
-                        <div class="bar" style="height: 60%"><span>Tue</span></div>
-                        <div class="bar" style="height: 80%"><span>Wed</span></div>
-                        <div class="bar" style="height: 50%"><span>Thu</span></div>
-                        <div class="bar" style="height: 90%"><span>Fri</span></div>
-                        <div class="bar" style="height: 70%"><span>Sat</span></div>
-                        <div class="bar" style="height: 30%"><span>Sun</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ROI Calculator -->
-    <section class="roi-section section-padding bg-light">
-        <div class="container">
-            <div class="roi-container glass-card gs-reveal">
-                <div class="roi-text">
-                    <h2>Calculate Your ROI</h2>
-                    <p>See how much time and money HIMS can save your facility by reducing manual work.</p>
-                    <div class="roi-input-group">
-                        <label>Number of Doctors</label>
-                        <input type="range" id="docSlider" min="1" max="50" value="5">
-                        <span id="docCount">5</span>
-                    </div>
-                    <div class="roi-input-group">
-                        <label>Daily Patients per Doctor</label>
-                        <input type="range" id="patSlider" min="10" max="100" value="30">
-                        <span id="patCount">30</span>
-                    </div>
-                </div>
-                <div class="roi-result">
-                    <p>Estimated Monthly Savings</p>
-                    <h2 class="color-primary" id="savingsAmount">₹4,50,000</h2>
-                    <p class="small-text">+ 120 hours of administrative work saved.</p>
-                    <a href="#" data-module="roi-breakdown" class="btn btn-primary mt-3 learn-more-btn">See Detailed
-                        Breakdown</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI Intelligence Section -->
-    <section class="ai-intelligence section-padding text-center" style="background-color: #ffeed4;"
-        id="ai-intelligence">
+    <!-- Internal Operations Section -->
+    <section class="internal-ops section-padding"
+        style="background-color: #FFF7ED; padding-top: 80px; padding-bottom: 100px; border-top: 2px solid #FEEBC8;">
         <div class="container container-sm text-center gs-reveal">
-            <div class="badge"
-                style="background: var(--white); color: var(--primary); border: 1px solid var(--primary);">✨ Future of
-                Healthcare</div>
-            <h2 style="color: var(--dark); margin-top: 15px;">AI-Powered Hospital Intelligence</h2>
-            <p style="color: var(--text-light); margin-top: 15px;">Leverage our proprietary machine learning algorithms
-                to predict patient flow, manage resources, and automatically assist with diagnostics.</p>
+            <h5
+                style="color: #DD6B20; font-size: 0.875rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px;">
+                INTERNAL OPERATIONS</h5>
+            <h2 style="font-size: 3.5rem; font-weight: 800; color: #1A202C; line-height: 1.1; margin-bottom: 24px;">
+                Empower Your<br>Workforce</h2>
+            <p style="color: #4A5568; font-size: 1.125rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">Equip
+                your staff with the tools they need to perform efficiently and maintain high service standards.</p>
         </div>
 
-        <div class="container">
-            <div class="grid grid-3 pt-5 gs-reveal">
-                <!-- AI Feature 1 -->
-                <div class="ai-card glass-card hover-lift"
-                    style="background: var(--white); border: 1px solid #f1f5f9; box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 40px 30px; border-radius: 20px; text-align: left; position: relative; overflow: hidden;">
-                    <div class="ai-glow"
-                        style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: var(--secondary); filter: blur(70px); opacity: 0.3; border-radius: 50%;">
+        <div class="container mt-5" style="max-width: 1200px;">
+            <div class="grid grid-2 gs-reveal">
+                <!-- Card 1 -->
+                <div class="feature-card hover-lift"
+                    style="background: white; border-radius: 24px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.04); border: 1px solid #edf2f7; position: relative; text-align: left;">
+
+                    <div style="display: flex; align-items: flex-start; gap: 24px; margin-bottom: 24px;">
+                        <div
+                            style="width: 64px; height: 64px; background-color: #FEEBC8; color: #DD6B20; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; flex-shrink: 0;">
+                            <i class="fa-solid fa-users-viewfinder"></i>
+                        </div>
+                        <div>
+                            <h3
+                                style="font-size: 1.8rem; font-weight: 800; color: #1A202C; margin: 0; line-height: 1.2;">
+                                HR & Payroll<br>Management</h3>
+                        </div>
                     </div>
-                    <div class="ai-icon" style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 20px;">
-                        <i class="fa-solid fa-brain"></i>
-                    </div>
-                    <h3 style="color: var(--dark); margin-bottom: 15px; font-size: 1.4rem;">Predictive Admission</h3>
-                    <p style="color: var(--text-light);">AI analyzes historical data and seasonal trends to predict OPD
-                        walk-ins and IPD admissions with 94% accuracy, ensuring you are never understaffed.</p>
+
+                    <p style="color: #4A5568; font-size: 1rem; line-height: 1.6; margin-bottom: 30px;">
+                        Comprehensive human resources management designed specifically for healthcare organizations with
+                        complex shift requirements.
+                    </p>
+
+                    <ul style="list-style: none; padding: 0; margin: 0; color: #4A5568;">
+                        <li
+                            style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; font-size: 1rem;">
+                            <i class="fa-solid fa-chevron-right"
+                                style="color: #a0aec0; font-size: 0.8rem; margin-top: 5px;"></i>
+                            <span>Advanced staff rostering and biometric attendance</span>
+                        </li>
+                        <li
+                            style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; font-size: 1rem;">
+                            <i class="fa-solid fa-chevron-right"
+                                style="color: #a0aec0; font-size: 0.8rem; margin-top: 5px;"></i>
+                            <span>Automated payroll generation with compliance</span>
+                        </li>
+                        <li
+                            style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; font-size: 1rem;">
+                            <i class="fa-solid fa-chevron-right"
+                                style="color: #a0aec0; font-size: 0.8rem; margin-top: 5px;"></i>
+                            <span>Performance evaluation and KPI tracking</span>
+                        </li>
+                        <li
+                            style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; font-size: 1rem;">
+                            <i class="fa-solid fa-chevron-right"
+                                style="color: #a0aec0; font-size: 0.8rem; margin-top: 5px;"></i>
+                            <span>Document management and credential verification</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- AI Feature 2 -->
-                <div class="ai-card glass-card hover-lift"
-                    style="background: var(--white); border: 1px solid #f1f5f9; box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 40px 30px; border-radius: 20px; text-align: left; position: relative; overflow: hidden; transform: translateY(-20px);">
-                    <div class="ai-glow"
-                        style="position: absolute; bottom: -50px; left: -50px; width: 150px; height: 150px; background: var(--primary); filter: blur(70px); opacity: 0.4; border-radius: 50%;">
+                <!-- Card 2 -->
+                <div class="feature-card hover-lift"
+                    style="background: white; border-radius: 24px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.04); border: 1px solid #edf2f7; position: relative; text-align: left;">
+
+                    <div style="display: flex; align-items: flex-start; gap: 24px; margin-bottom: 24px;">
+                        <div
+                            style="width: 64px; height: 64px; background-color: #E2E8F0; color: #DD6B20; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; flex-shrink: 0;">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <div style="display: flex; align-items: center; height: 64px;">
+                            <h3
+                                style="font-size: 1.8rem; font-weight: 800; color: #1A202C; margin: 0; line-height: 1.2;">
+                                Integrated Help Desk</h3>
+                        </div>
                     </div>
-                    <div class="ai-icon" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;">
-                        <i class="fa-solid fa-file-waveform"></i>
+
+                    <p style="color: #4A5568; font-size: 1rem; line-height: 1.6; margin-bottom: 30px;">
+                        Ensure smooth facility operations with a centralized ticket management system for IT,
+                        maintenance, and administrative support.
+                    </p>
+
+                    <ul style="list-style: none; padding: 0; margin: 0; color: #4A5568;">
+                        <li
+                            style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; font-size: 1rem;">
+                            <i class="fa-solid fa-chevron-right"
+                                style="color: #a0aec0; font-size: 0.8rem; margin-top: 5px;"></i>
+                            <span>Multi-channel ticket creation (Web, App, Email)</span>
+                        </li>
+                        <li
+                            style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; font-size: 1rem;">
+                            <i class="fa-solid fa-chevron-right"
+                                style="color: #a0aec0; font-size: 0.8rem; margin-top: 5px;"></i>
+                            <span>Automated routing based on department and priority</span>
+                        </li>
+                        <li
+                            style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; font-size: 1rem;">
+                            <i class="fa-solid fa-chevron-right"
+                                style="color: #a0aec0; font-size: 0.8rem; margin-top: 5px;"></i>
+                            <span>SLA monitoring and escalation matrices</span>
+                        </li>
+                        <li
+                            style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; font-size: 1rem;">
+                            <i class="fa-solid fa-chevron-right"
+                                style="color: #a0aec0; font-size: 0.8rem; margin-top: 5px;"></i>
+                            <span>Comprehensive issue resolution analytics</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- AI Doctor Copilot Section -->
+    <section class="ai-copilot section-padding" style="background-color: #fff7ed;" id="ai-intelligence">
+
+        <div class="container container-sm text-center gs-reveal" style="margin-bottom: 40px;">
+            <h5
+                style="color: #0ea5e9; font-size: 0.875rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px;">
+                FOCUS ON CARE, NOT CLICKS</h5>
+            <h2
+                style="font-size: 3.5rem; font-weight: 800; color: #1A202C; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; gap: 10px;">
+                AI Doctor Copilot
+                <i class="fa-solid fa-arrow-pointer"
+                    style="font-size: 1.5rem; transform: rotate(-20deg); color: #0ea5e9;"></i>
+            </h2>
+            <p style="color: #4A5568; font-size: 1.125rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                Experience the future of medical practice. Our intelligent assistant works silently in the background,
+                eliminating paperwork and enhancing clinical decisions.
+            </p>
+        </div>
+
+        <div class="container container-sm"
+            style="max-width: 1050px; text-align: left; background-color: #1A202C; color: white; border-radius: 32px; padding: 40px 50px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+            <div class="grid grid-2 gs-reveal" style="align-items: center; gap: 40px;">
+                <!-- Left Content: Text and Cards -->
+                <div class="ai-content">
+                    <!-- Feature Cards Stack -->
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <!-- Card 1 -->
+                        <div class="ai-feature-box hover-lift"
+                            style="background: rgba(45, 55, 72, 0.4); border: 1px solid rgba(113, 128, 150, 0.2); border-radius: 12px; padding: 16px 20px; display: flex; gap: 15px; align-items: flex-start; transition: all 0.3s ease;">
+                            <div
+                                style="width: 40px; height: 40px; background-color: rgba(56, 178, 172, 0.15); color: #38B2AC; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                                <i class="fa-solid fa-microphone"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 4px;">
+                                    Zero-Click Dictation</h4>
+                                <p style="color: #A0AEC0; font-size: 0.85rem; margin: 0; line-height: 1.4;">Talk
+                                    naturally to patients; AI populates the EMR fields without typing.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="ai-feature-box hover-lift"
+                            style="background: rgba(45, 55, 72, 0.4); border: 1px solid rgba(113, 128, 150, 0.2); border-radius: 12px; padding: 16px 20px; display: flex; gap: 15px; align-items: flex-start; transition: all 0.3s ease;">
+                            <div
+                                style="width: 40px; height: 40px; background-color: rgba(66, 153, 225, 0.15); color: #4299E1; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 4px;">
+                                    Predictive Diagnostics</h4>
+                                <p style="color: #A0AEC0; font-size: 0.85rem; margin: 0; line-height: 1.4;">Instantly
+                                    flags drug interactions and highlights abnormal lab trends.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="ai-feature-box hover-lift"
+                            style="background: rgba(45, 55, 72, 0.4); border: 1px solid rgba(113, 128, 150, 0.2); border-radius: 12px; padding: 16px 20px; display: flex; gap: 15px; align-items: flex-start; transition: all 0.3s ease;">
+                            <div
+                                style="width: 40px; height: 40px; background-color: rgba(237, 137, 54, 0.15); color: #ED8936; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                                <i class="fa-solid fa-user-doctor"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 4px;">
+                                    Virtual Smart Rounds</h4>
+                                <p style="color: #A0AEC0; font-size: 0.85rem; margin: 0; line-height: 1.4;">AI prepares
+                                    a 30-sec summary briefing before entering any patient room.</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3 style="color: var(--dark); margin-bottom: 15px; font-size: 1.4rem;">Smart Auto-Coding</h3>
-                    <p style="color: var(--text-light);">Natural Language Processing (NLP) automatically scans doctor's
-                        clinical notes to suggest accurate ICD-10 diagnostic and billing codes instantly.</p>
                 </div>
 
-                <!-- AI Feature 3 -->
-                <div class="ai-card glass-card hover-lift"
-                    style="background: var(--white); border: 1px solid #f1f5f9; box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 40px 30px; border-radius: 20px; text-align: left; position: relative; overflow: hidden;">
-                    <div class="ai-glow"
-                        style="position: absolute; top: 50%; right: -50px; width: 150px; height: 150px; background: #10B981; filter: blur(70px); opacity: 0.2; border-radius: 50%;">
+                <!-- Right Content: Circular Image & Badges -->
+                <div class="ai-visual gs-reveal"
+                    style="position: relative; display: flex; justify-content: flex-end; align-items: center;">
+                    <!-- Circular Mask -->
+                    <div
+                        style="width: 380px; height: 380px; border-radius: 50%; overflow: hidden; position: relative; box-shadow: 0 0 60px rgba(79, 209, 197, 0.15); border: 2px solid rgba(79, 209, 197, 0.2);">
+                        <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            alt="Doctor looking at phone"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%;">
                     </div>
-                    <div class="ai-icon" style="font-size: 2.5rem; color: #10B981; margin-bottom: 20px;">
-                        <i class="fa-solid fa-pills"></i>
+
+                    <!-- Floating Badge 1 (Top Right) -->
+                    <div class="floating-badge hover-lift"
+                        style="position: absolute; top: 80px; right: -20px; background: rgba(26, 32, 44, 0.85); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); padding: 10px 16px; border-radius: 30px; display: flex; align-items: center; gap: 8px; color: white; font-weight: 600; font-size: 0.8rem; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+                        <div
+                            style="width: 8px; height: 8px; background-color: #48BB78; border-radius: 50%; box-shadow: 0 0 10px #48BB78;">
+                        </div>
+                        Heart Rate Stable
                     </div>
-                    <h3 style="color: var(--dark); margin-bottom: 15px; font-size: 1.4rem;">Inventory Forecasting</h3>
-                    <p style="color: var(--text-light);">Stop stock-outs and expiry waste. The system dynamically
-                        predicts pharmaceutical demands based on real-time prescription velocity.</p>
+
+                    <!-- Floating Badge 2 (Bottom Left) -->
+                    <div class="floating-badge hover-lift"
+                        style="position: absolute; bottom: 60px; left: 20px; background: rgba(26, 32, 44, 0.85); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); padding: 10px 16px; border-radius: 30px; display: flex; align-items: center; gap: 8px; color: white; font-weight: 600; font-size: 0.8rem; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+                        <i class="fa-solid fa-bolt" style="color: #ECC94B;"></i>
+                        Vitals Analyzed
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intelligent Command Center Section -->
+    <style>
+        @keyframes pulse-live-dot {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+            }
+
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+            }
+        }
+    </style>
+    <section class="command-center section-padding"
+        style="background-color: #ffedd5; position: relative; overflow: hidden;" id="command-center">
+        <!-- Subtle dot pattern background -->
+        <div
+            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 20px 20px; opacity: 0.5; pointer-events: none;">
+        </div>
+
+        <div class="container container-sm text-center gs-reveal"
+            style="position: relative; z-index: 1; margin-bottom: 40px;">
+            <div
+                style="display: inline-block; background-color: #e0f2fe; color: #0284c7; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 16px;">
+                MISSION CONTROL</div>
+            <h2 style="font-size: 3rem; font-weight: 800; color: #1e293b; margin-bottom: 20px; line-height: 1.2;">
+                Intelligent Command<br>Center</h2>
+            <p style="color: #475569; font-size: 1.1rem; max-width: 650px; margin: 0 auto; line-height: 1.6;">
+                A centralized, real-time pulse of your entire hospital. Identify bottlenecks instantly, allocate
+                resources smartly, and scale your operations effortlessly.
+            </p>
+        </div>
+
+        <div class="container gs-reveal" style="position: relative; z-index: 1; max-width: 1000px;">
+            <!-- Dashboard UI -->
+            <div
+                style="background: white; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0; overflow: hidden;">
+                <!-- Header -->
+                <div
+                    style="background: #f8fafc; padding: 16px 24px; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <div style="display: flex; gap: 6px;">
+                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #ef4444;">
+                            </div>
+                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #eab308;">
+                            </div>
+                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #22c55e;">
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-left: 8px;">
+                            <div
+                                style="width: 8px; height: 8px; border-radius: 50%; background-color: #ef4444; margin-right: 6px; animation: pulse-live-dot 2s infinite;">
+                            </div>
+                            <span style="font-weight: 600; color: #334155; font-size: 0.95rem;">Live Operations
+                                Desk</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span
+                            style="background-color: #ef4444; color: white; display: inline-block; font-size: 0.75rem; font-weight: 700; padding: 6px 12px; border-radius: 20px; letter-spacing: 0.5px; animation: pulse-live-dot 2.5s infinite;">ON
+                            THE FLOOR</span>
+                    </div>
+                </div>
+
+                <!-- Top Metrics -->
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); background: #fdfdfd;">
+                    <!-- Metric 1 -->
+                    <div style="padding: 32px 24px; text-align: center; border-right: 1px solid #f1f5f9;">
+                        <div
+                            style="width: 50px; height: 50px; background-color: #e0f2fe; color: #0284c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin: 0 auto 16px;">
+                            <i class="fa-solid fa-bed-pulse"></i>
+                        </div>
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #0f172a; line-height: 1;">142</div>
+                        <div
+                            style="font-size: 0.75rem; font-weight: 700; color: #94a3b8; letter-spacing: 1px; margin-top: 8px; margin-bottom: 16px;">
+                            ICU BEDS OCCUPIED</div>
+                        <div style="font-size: 0.85rem; font-weight: 500; color: #10b981;">+8 Beds Available (Optimal)
+                        </div>
+                    </div>
+                    <!-- Metric 2 -->
+                    <div style="padding: 32px 24px; text-align: center; border-right: 1px solid #f1f5f9;">
+                        <div
+                            style="width: 50px; height: 50px; background-color: #fce7f3; color: #db2777; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin: 0 auto 16px;">
+                            <i class="fa-solid fa-stopwatch"></i>
+                        </div>
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #0f172a; line-height: 1;">12 <span
+                                style="font-size: 1.2rem; color: #64748b; font-weight: 600;">min</span></div>
+                        <div
+                            style="font-size: 0.75rem; font-weight: 700; color: #94a3b8; letter-spacing: 1px; margin-top: 8px; margin-bottom: 16px;">
+                            AVG ER WAIT TIME</div>
+                        <div
+                            style="font-size: 0.85rem; font-weight: 500; color: #f43f5e; background: #fff1f2; padding: 4px 12px; border-radius: 12px; display: inline-block;">
+                            Traffic Spike Predicted at 6 PM</div>
+                    </div>
+                    <!-- Metric 3 -->
+                    <div style="padding: 32px 24px; text-align: center;">
+                        <div
+                            style="width: 50px; height: 50px; background-color: #dcfce7; color: #16a34a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin: 0 auto 16px;">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                        </div>
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #0f172a; line-height: 1;"><span
+                                style="font-size: 1.5rem; color: #64748b;">₹</span>458<span
+                                style="font-size: 1.5rem; color: #64748b; font-weight: 600;">K</span></div>
+                        <div
+                            style="font-size: 0.75rem; font-weight: 700; color: #94a3b8; letter-spacing: 1px; margin-top: 8px; margin-bottom: 16px;">
+                            TODAY'S REVENUE</div>
+                        <div style="font-size: 0.85rem; font-weight: 600; color: #10b981;">↑ +14% vs Yesterday</div>
+                    </div>
+                </div>
+
+                <!-- Bottom Chart Area -->
+                <div style="background: #f8fafc; padding: 32px; border-top: 1px solid #e2e8f0;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+                        <h4 style="font-size: 1.1rem; font-weight: 700; color: #334155; margin: 0;">Live Department
+                            Traffic</h4>
+                        <div
+                            style="font-size: 0.8rem; font-weight: 500; color: #64748b; display: flex; align-items: center; gap: 6px;">
+                            <i class="fa-solid fa-clock-rotate-left"></i> Updated just now
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 40px;">
+                        <!-- Chart -->
+                        <div
+                            style="flex: 1; height: 200px; display: flex; align-items: flex-end; justify-content: space-between; padding-bottom: 20px; border-bottom: 1px solid #cbd5e1; position: relative;">
+
+                            <!-- Y-axis markers -->
+                            <div
+                                style="position: absolute; left: -25px; bottom: 20px; font-size: 0.7rem; color: #94a3b8;">
+                                25</div>
+                            <div
+                                style="position: absolute; left: -25px; bottom: 65px; font-size: 0.7rem; color: #94a3b8;">
+                                50</div>
+                            <div
+                                style="position: absolute; left: -25px; bottom: 110px; font-size: 0.7rem; color: #94a3b8;">
+                                75</div>
+                            <div
+                                style="position: absolute; left: -30px; bottom: 155px; font-size: 0.7rem; color: #94a3b8;">
+                                100</div>
+
+                            <!-- Lines -->
+                            <div
+                                style="position: absolute; left: 0; right: 0; bottom: 65px; height: 1px; border-bottom: 1px dashed #cbd5e1; z-index: 0;">
+                            </div>
+                            <div
+                                style="position: absolute; left: 0; right: 0; bottom: 110px; height: 1px; border-bottom: 1px dashed #cbd5e1; z-index: 0;">
+                            </div>
+                            <div
+                                style="position: absolute; left: 0; right: 0; bottom: 155px; height: 1px; border-bottom: 1px dashed #cbd5e1; z-index: 0;">
+                            </div>
+
+                            <!-- Bars -->
+                            <div
+                                style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                <div
+                                    style="width: 36px; height: 60px; background-color: #bae6fd; border-radius: 4px 4px 0 0;">
+                                </div>
+                                <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 500;">8 AM</span>
+                            </div>
+                            <div
+                                style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                <div
+                                    style="width: 36px; height: 80px; background-color: #bae6fd; border-radius: 4px 4px 0 0;">
+                                </div>
+                                <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 500;">10 AM</span>
+                            </div>
+                            <div
+                                style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                <div
+                                    style="width: 36px; height: 50px; background-color: #bae6fd; border-radius: 4px 4px 0 0;">
+                                </div>
+                                <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 500;">12 PM</span>
+                            </div>
+                            <div
+                                style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                <div
+                                    style="position: absolute; top: -30px; background-color: #0284c7; color: white; font-size: 0.65rem; font-weight: 700; padding: 4px 8px; border-radius: 12px;">
+                                    Peak</div>
+                                <div
+                                    style="width: 36px; height: 140px; background-color: #38bdf8; border-radius: 4px 4px 0 0; box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);">
+                                </div>
+                                <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 500;">2 PM</span>
+                            </div>
+                            <div
+                                style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                <div
+                                    style="width: 36px; height: 90px; background-color: #bae6fd; border-radius: 4px 4px 0 0;">
+                                </div>
+                                <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 500;">4 PM</span>
+                            </div>
+                            <div
+                                style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                <div
+                                    style="width: 36px; height: 60px; background-color: #bae6fd; border-radius: 4px 4px 0 0;">
+                                </div>
+                                <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 500;">6 PM</span>
+                            </div>
+                            <div
+                                style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                <div
+                                    style="width: 36px; height: 40px; background-color: #bae6fd; border-radius: 4px 4px 0 0;">
+                                </div>
+                                <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 500;">8 PM</span>
+                            </div>
+                        </div>
+
+                        <!-- Legend -->
+                        <div
+                            style="width: 250px; display: flex; flex-direction: column; justify-content: center; gap: 20px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div
+                                        style="width: 8px; height: 8px; border-radius: 50%; background-color: #ef4444;">
+                                    </div>
+                                    <span style="font-size: 0.9rem; font-weight: 600; color: #334155;">Emergency</span>
+                                </div>
+                                <span style="font-size: 0.8rem; font-weight: 600; color: #ef4444;">High Load</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div
+                                        style="width: 8px; height: 8px; border-radius: 50%; background-color: #10b981;">
+                                    </div>
+                                    <span style="font-size: 0.9rem; font-weight: 600; color: #334155;">Cardiology</span>
+                                </div>
+                                <span style="font-size: 0.8rem; font-weight: 500; color: #94a3b8;">Stable</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div
+                                        style="width: 8px; height: 8px; border-radius: 50%; background-color: #10b981;">
+                                    </div>
+                                    <span
+                                        style="font-size: 0.9rem; font-weight: 600; color: #334155;">Orthopedics</span>
+                                </div>
+                                <span style="font-size: 0.8rem; font-weight: 500; color: #94a3b8;">Stable</span>
+                            </div>
+
+                            <div style="margin-top: 10px; text-align: right;">
+                                <a href="#"
+                                    style="font-size: 0.85rem; font-weight: 600; color: #0284c7; text-decoration: none;">View
+                                    All Departments &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -852,57 +1229,290 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials section-padding">
-        <div class="container">
-            <div class="section-title text-center gs-reveal">
-                <h2>Trusted by Healthcare Leaders</h2>
-            </div>
-            <div class="grid grid-3 testimonial-grid">
-                <div class="testi-card glass-card gs-reveal">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i></div>
-                    <p>"HIMS transformed how we manage our 50-bed hospital. The billing is automated, and doctors
-                        love the intuitive EMR interface."</p>
-                    <div class="author">
-                        <img src="https://i.pravatar.cc/100?img=4" alt="Doctor">
-                        <div>
+    <style>
+        .testimonial-carousel-section {
+            background-color: #fff7ed;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .testimonial-carousel-section h2 {
+            font-size: 2.2rem;
+            color: #334155;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        .testimonial-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+
+        .testimonial-slides {
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+        }
+
+        .testi-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .testi-slide.active {
+            opacity: 1;
+            pointer-events: auto;
+            position: relative;
+        }
+
+        .testi-stars {
+            color: #f59e0b;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+        }
+
+        .testi-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .testi-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #475569;
+            margin-bottom: 25px;
+            max-width: 800px;
+            font-style: italic;
+        }
+
+        .testi-author h4 {
+            font-size: 1rem;
+            color: #1e293b;
+            margin: 0 0 5px 0;
+            font-weight: 700;
+        }
+
+        .testi-author span {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .testi-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: 2px solid #e2e8f0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.2s;
+            z-index: 10;
+        }
+
+        .testi-btn:hover {
+            border-color: #94a3b8;
+            color: #1e293b;
+        }
+
+        .testi-prev {
+            left: 0;
+        }
+
+        .testi-next {
+            right: 0;
+        }
+
+        .testi-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 30px;
+        }
+
+        .testi-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #cbd5e1;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .testi-dot.active {
+            background-color: #0284c7;
+        }
+    </style>
+    <section class="testimonial-carousel-section" id="testimonials">
+        <div class="container gs-reveal">
+            <h2>Read What Our Customers Say</h2>
+
+            <div class="testimonial-container">
+                <button class="testi-btn testi-prev" id="testiPrev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="testi-btn testi-next" id="testiNext"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <div class="testimonial-slides">
+                    <!-- Slide 1 -->
+                    <div class="testi-slide active">
+                        <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></div>
+                        <img src="https://i.pravatar.cc/100?img=4" alt="Doctor" class="testi-avatar">
+                        <p class="testi-text">"HIMS transformed how we manage our 50-bed hospital. The billing is
+                            automated, and doctors love the intuitive EMR interface. When patients contact me over
+                            e-consultation, all their past history is in one place which helps a lot. The team is very
+                            responsive, and I highly recommend them."</p>
+                        <div class="testi-author">
                             <h4>Dr. James Wilson</h4>
                             <span>Chief Medical Officer, City Care</span>
                         </div>
                     </div>
-                </div>
-                <div class="testi-card glass-card gs-reveal">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i></div>
-                    <p>"The telemedicine feature is flawless. It integrated perfectly with our scheduling, and patients
-                        find it very easy to join calls."</p>
-                    <div class="author">
-                        <img src="https://i.pravatar.cc/100?img=5" alt="Doctor">
-                        <div>
+                    <!-- Slide 2 -->
+                    <div class="testi-slide">
+                        <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></div>
+                        <img src="https://i.pravatar.cc/100?img=5" alt="Doctor" class="testi-avatar">
+                        <p class="testi-text">"The telemedicine feature is flawless. It integrated perfectly with our
+                            scheduling, and patients find it very easy to join calls in just one tap."</p>
+                        <div class="testi-author">
                             <h4>Dr. Emily Chen</h4>
                             <span>Pediatrician, Wellness Clinic</span>
                         </div>
                     </div>
-                </div>
-                <div class="testi-card glass-card gs-reveal">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i></div>
-                    <p>"Inventory and pharmacy management used to be a nightmare. Thanks to HIMS, we have zero
-                        stock-outs and lower wastage."</p>
-                    <div class="author">
-                        <img src="https://i.pravatar.cc/100?img=6" alt="Doctor">
-                        <div>
+                    <!-- Slide 3 -->
+                    <div class="testi-slide">
+                        <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></div>
+                        <img src="https://i.pravatar.cc/100?img=6" alt="Pharmacist" class="testi-avatar">
+                        <p class="testi-text">"Inventory and pharmacy management used to be a nightmare. Thanks to HIMS,
+                            we have zero stock-outs and lower wastage. Real-time expiry alerts are a lifesaver."</p>
+                        <div class="testi-author">
                             <h4>Mark Roberts</h4>
                             <span>Pharmacy Director, HealthPlus</span>
                         </div>
                     </div>
+                    <!-- Slide 4 -->
+                    <div class="testi-slide">
+                        <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></div>
+                        <img src="https://i.pravatar.cc/100?img=7" alt="Doctor" class="testi-avatar">
+                        <p class="testi-text">"The AI Doctor Copilot saves me at least 2 hours every day. Dictation and
+                            predictive diagnostics have truly revolutionized my workflow and patient care."</p>
+                        <div class="testi-author">
+                            <h4>Dr. Sarah Jenkins</h4>
+                            <span>Neurologist, NeuroCare</span>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="testi-slide">
+                        <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></div>
+                        <img src="https://i.pravatar.cc/100?img=8" alt="CEO" class="testi-avatar">
+                        <p class="testi-text">"Managing multiple branches was chaotic until we switched to this system.
+                            The Clinic Chain module gives me real-time unified reports across all locations."</p>
+                        <div class="testi-author">
+                            <h4>David Patel</h4>
+                            <span>CEO, Smile Dental Network</span>
+                        </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="testi-slide">
+                        <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></div>
+                        <img src="https://i.pravatar.cc/100?img=9" alt="HR" class="testi-avatar">
+                        <p class="testi-text">"From HR management to the integrated help desk, our internal operations
+                            are smoother than ever. Highly recommend to any hospital looking to optimize."</p>
+                        <div class="testi-author">
+                            <h4>Amanda Brooks</h4>
+                            <span>HR Director, Grand River Gen</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-dots" id="testiDots">
+                    <div class="testi-dot active" data-index="0"></div>
+                    <div class="testi-dot" data-index="1"></div>
+                    <div class="testi-dot" data-index="2"></div>
+                    <div class="testi-dot" data-index="3"></div>
+                    <div class="testi-dot" data-index="4"></div>
+                    <div class="testi-dot" data-index="5"></div>
                 </div>
             </div>
         </div>
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slides = document.querySelectorAll('.testi-slide');
+            const dots = document.querySelectorAll('.testi-dot');
+            const prevBtn = document.getElementById('testiPrev');
+            const nextBtn = document.getElementById('testiNext');
+
+            if (slides.length === 0) return;
+
+            let currentIdx = 0;
+            let slideInterval;
+
+            function showSlide(index) {
+                slides.forEach(s => s.classList.remove('active'));
+                dots.forEach(d => d.classList.remove('active'));
+
+                currentIdx = index;
+                if (currentIdx < 0) currentIdx = slides.length - 1;
+                if (currentIdx >= slides.length) currentIdx = 0;
+
+                slides[currentIdx].classList.add('active');
+                dots[currentIdx].classList.add('active');
+            }
+
+            function nextSlide() { showSlide(currentIdx + 1); }
+            function prevSlide() { showSlide(currentIdx - 1); }
+
+            if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); resetInterval(); });
+            if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); resetInterval(); });
+
+            dots.forEach((dot, idx) => {
+                dot.addEventListener('click', () => {
+                    showSlide(idx);
+                    resetInterval();
+                });
+            });
+
+            function startInterval() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+            function resetInterval() {
+                clearInterval(slideInterval);
+                startInterval();
+            }
+            startInterval();
+        });
+    </script>
 
     <!-- Blog / Insights -->
     <section class="blog section-padding bg-light">
@@ -949,115 +1559,728 @@
         </div>
     </section>
 
-    <!-- Location Section -->
-    <section class="location-section section-padding bg-light" id="location">
-        <div class="container">
-            <div class="section-title text-center gs-reveal">
-                <h2>Our Location</h2>
-                <p>Visit our global headquarters or get in touch with our team.</p>
-            </div>
-            <div class="location-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: stretch;">
-                <div class="location-info gs-reveal"
-                    style="display: flex; flex-direction: column; justify-content: space-between; gap: 20px;">
-                    <a href="https://maps.google.com/maps?q=Shirpur,%20Maharashtra" target="_blank"
-                        class="info-card glass-card hover-lift"
-                        style="text-decoration: none; padding: 25px; border-radius: 12px; display: flex; align-items: flex-start; gap: 15px;">
-                        <i class="fa-solid fa-location-dot"
-                            style="font-size: 1.5rem; color: var(--primary); margin-top: 5px;"></i>
-                        <div>
-                            <h4 style="margin-bottom: 5px; font-size: 1.1rem; color: var(--dark);">Headquarters</h4>
-                            <p style="color: var(--text-light); line-height: 1.5; font-size: 0.95rem;">HIMS Main
-                                Campus<br>Shirpur, Maharashtra, India</p>
-                        </div>
-                    </a>
-                    <a href="mailto:hello@hims-software.com" class="info-card glass-card hover-lift"
-                        style="text-decoration: none; padding: 25px; border-radius: 12px; display: flex; align-items: flex-start; gap: 15px;">
-                        <i class="fa-solid fa-envelope"
-                            style="font-size: 1.5rem; color: var(--primary); margin-top: 5px;"></i>
-                        <div>
-                            <h4 style="margin-bottom: 5px; font-size: 1.1rem; color: var(--dark);">Email Us</h4>
-                            <p style="color: var(--text-light); line-height: 1.5; font-size: 0.95rem;">
-                                hello@hims-software.com<br>support@hims-software.com</p>
-                        </div>
-                    </a>
-                    <a href="tel:+18001234567" class="info-card glass-card hover-lift"
-                        style="text-decoration: none; padding: 25px; border-radius: 12px; display: flex; align-items: flex-start; gap: 15px;">
-                        <i class="fa-solid fa-phone"
-                            style="font-size: 1.5rem; color: var(--primary); margin-top: 5px;"></i>
-                        <div>
-                            <h4 style="margin-bottom: 5px; font-size: 1.1rem; color: var(--dark);">Call Us</h4>
-                            <p style="color: var(--text-light); line-height: 1.5; font-size: 0.95rem;">+1 (800)
-                                123-4567<br>Mon - Fri, 9:00 AM - 6:00 PM</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="location-map gs-reveal glass-card"
-                    style="border-radius: 12px; overflow: hidden; padding: 8px; min-height: 350px;">
-                    <iframe
-                        src="https://maps.google.com/maps?q=Shirpur,%20Maharashtra&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                        width="100%" height="100%" style="border:0; border-radius: 8px;" allowfullscreen=""
-                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
+    <!-- Advanced Integrations & Ecosystem -->
+    <section class="ecosystem-section"
+        style="background: #fff7ed; position: relative; overflow: hidden; padding: 100px 0;">
+        <!-- Background soft glowing orbs -->
+        <div
+            style="position: absolute; top: -10%; left: -5%; width: 400px; height: 400px; background: #ffedd5; border-radius: 50%; filter: blur(100px); opacity: 0.8;">
         </div>
-    </section>
+        <div
+            style="position: absolute; bottom: -10%; right: -5%; width: 400px; height: 400px; background: #fed7aa; border-radius: 50%; filter: blur(100px); opacity: 0.8;">
+        </div>
 
-    <!-- CTA Section -->
-    <section class="cta-section section-padding text-center text-white">
-        <div class="container container-sm gs-reveal">
-            <h2>Transform Your Hospital Digitally</h2>
-            <p>Join thousands of healthcare providers who trust HIMS to run their daily operations smoothly.</p>
-            <div class="mt-4">
-                <a href="#" class="btn btn-white btn-lg mr-2 text-primary">Get Demo Now</a>
-                <a href="#" class="btn btn-outline-white btn-lg">Contact Sales</a>
+        <div class="container gs-reveal" style="position: relative; z-index: 10; text-align: center;">
+            <div class="section-title text-center" style="margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: #1e293b;">The Ultimate Healthcare Ecosystem
+                </h2>
+                <p style="color: #475569; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">HIMS doesn't just manage
+                    your hospital; it connects it to the world. Seamlessly integrate with labs, payment gateways, and
+                    telehealth providers.</p>
+            </div>
+
+            <style>
+                @keyframes pulse-node-light {
+
+                    0%,
+                    100% {
+                        box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        box-shadow: 0 0 40px rgba(56, 189, 248, 0.5);
+                        transform: scale(1.05);
+                    }
+                }
+
+                @keyframes float-up-down {
+
+                    0%,
+                    100% {
+                        transform: translateY(0);
+                    }
+
+                    50% {
+                        transform: translateY(-15px);
+                    }
+                }
+
+                .eco-hub {
+                    position: relative;
+                    height: 450px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 80px;
+                    max-width: 900px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .eco-center {
+                    width: 130px;
+                    height: 130px;
+                    background: white;
+                    border: 2px solid #bae6fd;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 10;
+                    animation: pulse-node-light 3s infinite;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                }
+
+                .eco-node {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 12px;
+                    z-index: 5;
+                    cursor: pointer;
+                    animation: float-up-down 5s ease-in-out infinite;
+                }
+
+                .eco-icon {
+                    width: 65px;
+                    height: 65px;
+                    background: white;
+                    border: 1px solid #e2e8f0;
+                    border-radius: 18px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.6rem;
+                    color: #3b82f6;
+                    transition: all 0.3s;
+                    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+                }
+
+                .eco-node:hover .eco-icon {
+                    background: #f0f9ff;
+                    border-color: #38bdf8;
+                    transform: scale(1.15) translateY(-5px);
+                    box-shadow: 0 15px 35px rgba(56, 189, 248, 0.2);
+                }
+
+                .eco-node span {
+                    color: #334155;
+                    font-size: 0.95rem;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                    transition: color 0.3s;
+                }
+
+                .eco-node:hover span {
+                    color: #0ea5e9;
+                }
+
+                .eco-line {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 100%;
+                    height: 100%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1;
+                    pointer-events: none;
+                }
+
+                .eco-line circle {
+                    fill: none;
+                    stroke: #e2e8f0;
+                    stroke-width: 1.5;
+                    stroke-dasharray: 4 6;
+                }
+
+                /* Positioning the nodes */
+                .node-1 {
+                    top: 5%;
+                    left: 15%;
+                    animation-delay: 0s;
+                }
+
+                .node-2 {
+                    top: 15%;
+                    right: 15%;
+                    animation-delay: 1.2s;
+                }
+
+                .node-3 {
+                    bottom: 5%;
+                    left: 20%;
+                    animation-delay: 2.5s;
+                }
+
+                .node-4 {
+                    bottom: 10%;
+                    right: 20%;
+                    animation-delay: 0.8s;
+                }
+
+                .node-5 {
+                    top: 50%;
+                    left: 0%;
+                    transform: translateY(-50%);
+                    animation-delay: 1.7s;
+                }
+
+                .node-6 {
+                    top: 50%;
+                    right: 0%;
+                    transform: translateY(-50%);
+                    animation-delay: 2.1s;
+                }
+
+                /* Responsiveness */
+                @media (max-width: 768px) {
+                    .eco-hub {
+                        height: 350px;
+                    }
+
+                    .eco-center {
+                        width: 90px;
+                        height: 90px;
+                    }
+
+                    .eco-center i {
+                        font-size: 2.5rem !important;
+                    }
+
+                    .eco-icon {
+                        width: 50px;
+                        height: 50px;
+                        font-size: 1.2rem;
+                    }
+
+                    .eco-line circle:first-child {
+                        r: 180;
+                    }
+
+                    .eco-line circle:last-child {
+                        r: 120;
+                    }
+
+                    .node-1 {
+                        top: 0;
+                        left: 10%;
+                    }
+
+                    .node-2 {
+                        top: 0;
+                        right: 10%;
+                    }
+
+                    .node-3 {
+                        bottom: 0;
+                        left: 10%;
+                    }
+
+                    .node-4 {
+                        bottom: 0;
+                        right: 10%;
+                    }
+                }
+
+                /* Modal Styles */
+                .eco-modal-overlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(15, 23, 42, 0.4);
+                    backdrop-filter: blur(8px);
+                    z-index: 9999;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s ease;
+                }
+
+                .eco-modal-overlay.active {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .eco-modal-box {
+                    background: white;
+                    width: 90%;
+                    max-width: 500px;
+                    border-radius: 20px;
+                    padding: 40px;
+                    position: relative;
+                    transform: scale(0.9);
+                    transition: all 0.3s ease;
+                    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+                    text-align: center;
+                }
+
+                .eco-modal-overlay.active .eco-modal-box {
+                    transform: scale(1);
+                }
+
+                .eco-modal-close {
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    background: #f1f5f9;
+                    border: none;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    color: #475569;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: background 0.2s;
+                }
+
+                .eco-modal-close:hover {
+                    background: #e2e8f0;
+                    color: #0f172a;
+                }
+
+                .eco-modal-icon {
+                    width: 80px;
+                    height: 80px;
+                    background: #eff6ff;
+                    border-radius: 50%;
+                    margin: 0 auto 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 2.5rem;
+                    color: #3b82f6;
+                }
+            </style>
+
+            <div class="eco-hub">
+                <!-- Circular background tracks -->
+                <svg class="eco-line">
+                    <circle cx="50%" cy="50%" r="280"></circle>
+                    <circle cx="50%" cy="50%" r="180"></circle>
+                </svg>
+
+                <div class="eco-center">
+                    <i class="fa-solid fa-hospital" style="font-size: 3.5rem; color: #3b82f6;"></i>
+                </div>
+
+                <!-- Nodes with onClick events -->
+                <div class="eco-node node-1"
+                    onclick="openEcoApp('WhatsApp Automation', 'tpl-whatsapp', 'fa-brands fa-whatsapp', '#25D366')">
+                    <div class="eco-icon" style="color: #25D366;"><i class="fa-brands fa-whatsapp"></i></div>
+                    <span>WhatsApp</span>
+                </div>
+                <div class="eco-node node-2"
+                    onclick="openEcoApp('TPA Eligibility Check', 'tpl-tpa', 'fa-solid fa-file-invoice-dollar', '#8b5cf6')">
+                    <div class="eco-icon" style="color: #8b5cf6;"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                    <span>Insurance TPAs</span>
+                </div>
+                <div class="eco-node node-3"
+                    onclick="openEcoApp('Lab Reports Sync', 'tpl-labs', 'fa-solid fa-vial-virus', '#ef4444')">
+                    <div class="eco-icon" style="color: #ef4444;"><i class="fa-solid fa-vial-virus"></i></div>
+                    <span>External Labs</span>
+                </div>
+                <div class="eco-node node-4"
+                    onclick="openEcoApp('Online Checkout', 'tpl-payments', 'fa-brands fa-stripe', '#6366f1')">
+                    <div class="eco-icon" style="color: #6366f1;"><i class="fa-brands fa-stripe"></i></div>
+                    <span>Payments</span>
+                </div>
+                <div class="eco-node node-5"
+                    onclick="openEcoApp('Live Video Consult', 'tpl-telehealth', 'fa-solid fa-video', '#0ea5e9')">
+                    <div class="eco-icon" style="color: #0ea5e9;"><i class="fa-solid fa-video"></i></div>
+                    <span>Telehealth API</span>
+                </div>
+                <div class="eco-node node-6"
+                    onclick="openEcoApp('IoT Vitals Monitor', 'tpl-iot', 'fa-solid fa-microchip', '#f59e0b')">
+                    <div class="eco-icon" style="color: #f59e0b;"><i class="fa-solid fa-microchip"></i></div>
+                    <span>IoT Devices</span>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Feature Modal Templates (Hidden) -->
+        <div style="display: none;">
+            <div id="tpl-whatsapp">
+                <div
+                    style="background: #e5ddd5; border-radius: 12px; height: 250px; display: flex; flex-direction: column; overflow: hidden; border: 1px solid #cbd5e1; text-align: left;">
+                    <div
+                        style="background: #075e54; padding: 12px 15px; color: white; display: flex; align-items: center; gap: 10px;">
+                        <div
+                            style="width: 32px; height: 32px; background: white; border-radius: 50%; color:#075e54; display:flex; align-items:center; justify-content:center;">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <span style="font-weight: 600;">HIMS Auto-Bot</span>
+                    </div>
+                    <div
+                        style="flex: 1; padding: 15px; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem;">
+                        <div
+                            style="background: white; padding: 10px 14px; border-radius: 0 12px 12px 12px; align-self: flex-start; max-width: 80%; box-shadow: 0 1px 1px rgba(0,0,0,0.1);">
+                            Hello! This is a reminder for your appointment with Dr. Smith today at 10:00 AM. Please
+                            reply '1' to confirm.
+                        </div>
+                        <div
+                            style="background: #dcf8c6; padding: 10px 14px; border-radius: 12px 0 12px 12px; align-self: flex-end; box-shadow: 0 1px 1px rgba(0,0,0,0.1);">
+                            1
+                        </div>
+                        <div
+                            style="background: white; padding: 10px 14px; border-radius: 0 12px 12px 12px; align-self: flex-start; max-width: 80%; box-shadow: 0 1px 1px rgba(0,0,0,0.1);">
+                            Thank you! Your appointment is confirmed. See you soon.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tpl-tpa">
+                <div
+                    style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; text-align: left; background:#f8fafc;">
+                    <h4 style="margin-top: 0; margin-bottom: 15px; color: #1e293b; font-size: 1.05rem;">Instant
+                        Eligibility Check</h4>
+                    <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                        <input type="text" value="INS-8894-XYZ"
+                            style="flex: 1; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; color:#475569; font-weight: 500;"
+                            readonly>
+                        <button
+                            style="background: #8b5cf6; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 600; cursor:pointer;">Verify</button>
+                    </div>
+                    <div
+                        style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 15px; border-radius: 8px; color: #166534; display: flex; align-items: flex-start; gap: 12px;">
+                        <i class="fa-solid fa-circle-check" style="font-size: 1.5rem; margin-top:2px;"></i>
+                        <div>
+                            <strong style="font-size: 1.05rem;">Active Coverage</strong><br>
+                            <span style="font-size: 0.9rem; opacity:0.9;">Patient is eligible for OPD & IPD. Co-pay:
+                                10%. Remaining Balance: $5,000.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tpl-labs">
+                <div
+                    style="border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; text-align: left; background:white;">
+                    <div
+                        style="background: #f1f5f9; padding: 12px 15px; border-bottom: 1px solid #e2e8f0; font-weight: 600; color: #1e293b; display: flex; justify-content: space-between;">
+                        <span>Pending External Labs</span>
+                        <span style="color: #ef4444; font-size: 0.85rem;"><i class="fa-solid fa-circle-dot"
+                                style="animation: pulse-node-light 2s infinite;"></i> Auto-Syncing</span>
+                    </div>
+                    <div style="padding: 15px; font-size: 0.95rem;">
+                        <div
+                            style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #e2e8f0;">
+                            <span style="color:#334155;">Complete Blood Count (CBC)</span>
+                            <span style="color: #10b981; font-weight: 600;"><i class="fa-solid fa-check-double"></i>
+                                Synced PDF</span>
+                        </div>
+                        <div
+                            style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #e2e8f0;">
+                            <span style="color:#334155;">Lipid Profile</span>
+                            <span style="color: #10b981; font-weight: 600;"><i class="fa-solid fa-check-double"></i>
+                                Synced PDF</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+                            <span style="color:#334155;">Thyroid Test (T3, T4, TSH)</span>
+                            <span style="color: #f59e0b; font-weight: 600;"><i class="fa-solid fa-spinner fa-spin"></i>
+                                Processing Lab</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tpl-payments">
+                <div
+                    style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; text-align: left; background:#f8fafc;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <span style="font-weight: 600; color: #64748b;">Consultation Fee</span>
+                        <span style="font-size: 1.6rem; font-weight: 700; color: #1e293b;">$150.00</span>
+                    </div>
+                    <div
+                        style="background: white; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 15px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fa-brands fa-cc-visa" style="font-size: 1.8rem; color: #1e40af;"></i>
+                            <i class="fa-brands fa-cc-mastercard" style="font-size: 1.8rem; color: #ea580c;"></i>
+                            <span style="margin-left:auto; font-size:0.85rem; color:#10b981; font-weight:bold;"><i
+                                    class="fa-solid fa-lock"></i> Encrypted</span>
+                        </div>
+                        <input type="text" value="**** **** **** 4242"
+                            style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 10px; color:#475569; font-weight:500;"
+                            readonly>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" value="12/28"
+                                style="flex: 1; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; color:#475569; font-weight:500;"
+                                readonly>
+                            <input type="text" value="***"
+                                style="flex: 1; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; color:#475569; font-weight:500;"
+                                readonly>
+                        </div>
+                    </div>
+                    <button
+                        style="width: 100%; background: #6366f1; color: white; border: none; padding: 12px; border-radius: 6px; font-weight: 600; font-size:1.05rem; cursor:pointer; box-shadow:0 4px 6px -1px rgba(99,102,241,0.2);">Pay
+                        Securely</button>
+                </div>
+            </div>
+
+            <div id="tpl-telehealth">
+                <div
+                    style="border-radius: 12px; overflow: hidden; background: #0f172a; position: relative; height: 260px; border: 1px solid #334155;">
+                    <!-- Patient large video -->
+                    <img src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;">
+                    <!-- Doctor small video -->
+                    <div
+                        style="position: absolute; top: 15px; right: 15px; width: 90px; height: 120px; background: black; border-radius: 8px; overflow: hidden; border: 2px solid white; box-shadow: 0 10px 20px rgba(0,0,0,0.5);">
+                        <img src="https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=300"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <!-- Controls -->
+                    <div
+                        style="position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); display: flex; gap: 12px;">
+                        <div
+                            style="width: 40px; height: 40px; background: rgba(0,0,0,0.6); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; border:1px solid rgba(255,255,255,0.2);">
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
+                        <div
+                            style="width: 40px; height: 40px; background: rgba(0,0,0,0.6); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; border:1px solid rgba(255,255,255,0.2);">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <div
+                            style="width: 40px; height: 40px; background: #ef4444; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 6px rgba(239,68,68,0.4);">
+                            <i class="fa-solid fa-phone-slash"></i>
+                        </div>
+                    </div>
+                    <div
+                        style="position: absolute; top: 15px; left: 15px; background: rgba(0,0,0,0.6); color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; display:flex; align-items:center; gap:6px;">
+                        <i class="fa-solid fa-circle text-success" style="font-size:0.5rem;"></i> 12:45
+                    </div>
+                </div>
+            </div>
+
+            <div id="tpl-iot">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left;">
+                    <div
+                        style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 15px; background: white; border-left: 4px solid #ef4444; box-shadow:0 2px 4px rgba(0,0,0,0.02);">
+                        <p style="margin: 0; color: #64748b; font-size: 0.85rem; font-weight:600;">Heart Rate</p>
+                        <h3 style="margin: 5px 0 0; color: #1e293b; font-size: 1.8rem;">72 <span
+                                style="font-size: 0.9rem; color: #94a3b8; font-weight:normal;">bpm</span></h3>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:5px;">
+                            <i class="fa-solid fa-heart-pulse"
+                                style="color: #ef4444; font-size: 1.2rem; animation: pulse-node-light 1s infinite;"></i>
+                            <span style="font-size:0.75rem; color:#10b981;"><i class="fa-solid fa-arrow-trend-down"></i>
+                                Normal</span>
+                        </div>
+                    </div>
+                    <div
+                        style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 15px; background: white; border-left: 4px solid #0ea5e9; box-shadow:0 2px 4px rgba(0,0,0,0.02);">
+                        <p style="margin: 0; color: #64748b; font-size: 0.85rem; font-weight:600;">SpO2 Live</p>
+                        <h3 style="margin: 5px 0 0; color: #1e293b; font-size: 1.8rem;">98 <span
+                                style="font-size: 0.9rem; color: #94a3b8; font-weight:normal;">%</span></h3>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:5px;">
+                            <i class="fa-solid fa-wind" style="color: #0ea5e9; font-size: 1.2rem;"></i>
+                            <span style="font-size:0.75rem; color:#10b981;">Optimal</span>
+                        </div>
+                    </div>
+                    <div
+                        style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 15px; background: white; border-left: 4px solid #8b5cf6; grid-column: span 2; box-shadow:0 2px 4px rgba(0,0,0,0.02); display:flex; align-items:center; justify-content:space-between;">
+                        <div>
+                            <p style="margin: 0; color: #64748b; font-size: 0.85rem; font-weight:600;">Blood Pressure
+                            </p>
+                            <h3 style="margin: 5px 0 0; color: #1e293b; font-size: 1.8rem;">118/78 <span
+                                    style="font-size: 0.9rem; color: #94a3b8; font-weight:normal;">mmHg</span></h3>
+                        </div>
+                        <span
+                            style="background: #e0e7ff; color: #4338ca; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: bold;">Stable</span>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Modal HTML -->
+        <div class="eco-modal-overlay" id="ecoModalOverlay">
+            <div class="eco-modal-box">
+                <button class="eco-modal-close" onclick="closeEcoApp()"><i class="fa-solid fa-xmark"></i></button>
+                <div class="eco-modal-icon" id="ecoModalIcon"
+                    style="margin-bottom: 10px; width: 60px; height: 60px; font-size: 2rem;">
+                    <!-- Icon populated dynamically -->
+                </div>
+                <h3 id="ecoModalTitle"
+                    style="color: #1e293b; font-size: 1.5rem; margin-bottom: 25px; font-weight: 700;">Integration</h3>
+                <div id="ecoModalContent" style="margin-bottom: 20px;">
+                    <!-- App interface injects here -->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function openEcoApp(title, templateId, iconClass, iconColor) {
+                document.getElementById('ecoModalTitle').innerText = title;
+
+                // Inject template
+                const tpl = document.getElementById(templateId);
+                const contentBox = document.getElementById('ecoModalContent');
+                if (tpl) {
+                    contentBox.innerHTML = tpl.innerHTML;
+                } else {
+                    contentBox.innerHTML = '<p>Demo currently unavailable.</p>';
+                }
+
+                const iconContainer = document.getElementById('ecoModalIcon');
+                iconContainer.innerHTML = '<i class="' + iconClass + '"></i>';
+                iconContainer.style.color = iconColor;
+                iconContainer.style.background = iconColor + '1A';
+
+                document.getElementById('ecoModalOverlay').classList.add('active');
+            }
+            function closeEcoApp() {
+                document.getElementById('ecoModalOverlay').classList.remove('active');
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const overlay = document.getElementById('ecoModalOverlay');
+                if (overlay) {
+                    overlay.addEventListener('click', function (e) {
+                        if (e.target === this) {
+                            closeEcoApp();
+                        }
+                    });
+                }
+            });
+        </script>
     </section>
 
     <!-- Footer -->
-    <footer class="footer pt-5 pb-3 bg-dark text-white">
-        <div class="container">
-            <div class="grid grid-4 footer-grid">
+    <footer class="footer pt-5 pb-4 footer-dark-theme"
+        style="background-color: #000000; border-top: 1px solid #1e293b;">
+        <style>
+            .footer-dark-theme {
+                color: #cbd5e1;
+            }
+
+            .footer-dark-theme a {
+                color: #94a3b8;
+                transition: color 0.3s;
+                text-decoration: none;
+            }
+
+            .footer-dark-theme a:hover {
+                color: var(--primary);
+            }
+
+            .footer-dark-theme h3,
+            .footer-dark-theme h4 {
+                color: #f8fafc;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+
+            .footer-dark-theme p {
+                color: #94a3b8;
+                line-height: 1.6;
+            }
+
+            .footer-dark-theme .social-links a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: #1e293b;
+                color: #cbd5e1;
+                font-size: 1.1rem;
+                margin-right: 10px;
+                transition: all 0.3s;
+            }
+
+            .footer-dark-theme .social-links a:hover {
+                background: var(--primary);
+                color: white;
+                transform: translateY(-3px);
+            }
+
+            .footer-dark-theme ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            .footer-dark-theme ul li {
+                margin-bottom: 12px;
+            }
+
+            .footer-contact p {
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .footer-contact i {
+                color: var(--primary);
+                font-size: 1.1rem;
+            }
+
+            .footer-bottom {
+                border-top: 1px solid #1e293b !important;
+                color: #64748b;
+            }
+        </style>
+        <div class="container text-left">
+            <div class="grid grid-4 footer-grid" style="align-items: flex-start; gap: 40px; margin-bottom: 10px;">
                 <div class="footer-brand">
-                    <h3><i class="fa-solid fa-hospital"></i> HIMS</h3>
-                    <p>The smartest way to manage your healthcare facility. Cloud-based, secure, and scalable.</p>
-                    <div class="social-links mt-3">
+                    <h3 style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-hospital"
+                            style="color: var(--primary); font-size: 2rem;"></i> HIMS</h3>
+                    <p style="text-align: left;">The smartest way to manage your healthcare facility. Cloud-based,
+                        secure, and scalable to medical centers of all sizes.</p>
+                    <div class="social-links mt-4 text-left">
                         <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                     </div>
                 </div>
-                <div class="footer-links">
+                <div class="footer-links" style="padding-top: 10px; text-align: left;">
                     <h4>Solutions</h4>
                     <ul>
                         <li><a href="#">Clinic Management</a></li>
                         <li><a href="#">Hospital (HIMS)</a></li>
-                        <li><a href="#">Pharmacy</a></li>
-                        <li><a href="#">Laboratory</a></li>
+                        <li><a href="#">Pharmacy E-Store</a></li>
+                        <li><a href="#">Laboratory Sync</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
+                <div class="footer-links" style="padding-top: 10px; text-align: left;">
                     <h4>Company</h4>
                     <ul>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Careers</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Latest Blog</a></li>
+                        <li><a href="#">Contact Support</a></li>
                     </ul>
                 </div>
-                <div class="footer-contact">
+                <div class="footer-contact" style="padding-top: 10px; text-align: left;">
                     <h4>Contact Us</h4>
                     <p><i class="fa-solid fa-envelope"></i> hello@hims.com</p>
                     <p><i class="fa-solid fa-phone"></i> +1 (800) 123-4567</p>
                     <p><i class="fa-solid fa-location-dot"></i> 123 Health Ave, SF, CA</p>
                 </div>
             </div>
-            <div class="footer-bottom mt-5 text-center text-light-gray border-top pt-3">
-                <p>&copy; 2026 HIMS Inc. All rights reserved. | Privacy Policy | Terms of Service</p>
+            <div class="footer-bottom mt-5 text-center pt-4" style="font-size: 0.95rem;">
+                <p style="margin: 0;">&copy; 2026 HIMS Inc. All rights reserved. | <a href="#"
+                        style="color: #94a3b8;">Privacy Policy</a> | <a href="#" style="color: #94a3b8;">Terms of
+                        Service</a></p>
             </div>
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn tooltip" data-tooltip="Back to Top" id="scrollTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <!-- Chatbot Demo -->
     <div class="chatbot-wrapper gs-reveal">

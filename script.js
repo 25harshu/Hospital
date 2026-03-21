@@ -202,35 +202,35 @@ if (micBtn && camBtn && endBtn) {
     // Speech Recognition API
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     let recognition = null;
-    
+
     if (SpeechRecognition) {
         recognition = new SpeechRecognition();
         recognition.continuous = false;
         recognition.lang = 'en-US';
         recognition.interimResults = false;
 
-        recognition.onstart = function() {
-            if(voiceIndicator) {
+        recognition.onstart = function () {
+            if (voiceIndicator) {
                 voiceIndicator.classList.add('listening');
                 voiceStatus.innerText = "Listening...";
             }
-            if(doctorCaption) doctorCaption.classList.remove('show');
+            if (doctorCaption) doctorCaption.classList.remove('show');
         };
 
-        recognition.onresult = function(event) {
+        recognition.onresult = function (event) {
             const transcript = event.results[0][0].transcript.toLowerCase();
-            if(voiceIndicator) {
+            if (voiceIndicator) {
                 voiceIndicator.classList.remove('listening');
                 voiceStatus.innerText = "Processing...";
             }
-            
+
             setTimeout(() => {
                 respondToUser(transcript);
             }, 600);
         };
 
-        recognition.onerror = function(event) {
-            if(voiceIndicator) {
+        recognition.onerror = function (event) {
+            if (voiceIndicator) {
                 voiceIndicator.classList.remove('listening');
                 voiceStatus.innerText = "Microphone error or no speech detected.";
             }
@@ -242,7 +242,7 @@ if (micBtn && camBtn && endBtn) {
 
     function respondToUser(text) {
         let reply = "I understand. Can you tell me more about your symptoms?";
-        
+
         if (text.includes('hello') || text.includes('hi')) {
             reply = "Hello there! I am your AI doctor. How are you feeling today?";
         } else if (text.includes('headache') || text.includes('fever') || text.includes('pain')) {
@@ -252,17 +252,17 @@ if (micBtn && camBtn && endBtn) {
         } else if (text.includes('call') || text.includes('bye') || text.includes('thank')) {
             reply = "You're welcome! Take rest and drink plenty of fluids. Goodbye!";
             setTimeout(() => {
-                if(micOn) micBtn.click();
+                if (micOn) micBtn.click();
             }, 4000);
         }
 
         // Display Caption
-        if(doctorCaption) {
+        if (doctorCaption) {
             doctorCaption.innerText = `"${reply}"`;
             doctorCaption.classList.add('show');
         }
 
-        if(voiceIndicator) {
+        if (voiceIndicator) {
             voiceIndicator.classList.remove('listening');
             voiceStatus.innerText = "Doctor is speaking...";
         }
@@ -271,15 +271,15 @@ if (micBtn && camBtn && endBtn) {
         if ('speechSynthesis' in window) {
             const utterance = new SpeechSynthesisUtterance(reply);
             utterance.lang = 'en-US';
-            utterance.pitch = 1.1; 
+            utterance.pitch = 1.1;
             utterance.rate = 1.0;
-            
+
             const voices = window.speechSynthesis.getVoices();
             const voice = voices.find(v => v.name.includes('Female') || v.name.includes('Google US English'));
-            if(voice) utterance.voice = voice;
+            if (voice) utterance.voice = voice;
 
-            utterance.onend = function() {
-                if(doctorCaption) {
+            utterance.onend = function () {
+                if (doctorCaption) {
                     setTimeout(() => doctorCaption.classList.remove('show'), 3000);
                 }
                 if (micOn && recognition && voiceIndicator) {
@@ -293,23 +293,23 @@ if (micBtn && camBtn && endBtn) {
     micBtn.addEventListener('click', (e) => {
         e.preventDefault();
         micOn = !micOn;
-        
+
         if (micOn) {
             micBtn.innerHTML = '<i class="fa-solid fa-microphone"></i>';
             micBtn.style.color = 'white';
             if (recognition) {
                 try {
                     recognition.start();
-                } catch(e) { console.error(e); }
+                } catch (e) { console.error(e); }
             } else {
-                if(voiceStatus) voiceStatus.innerText = "Speech Recognition not supported.";
+                if (voiceStatus) voiceStatus.innerText = "Speech Recognition not supported.";
             }
         } else {
             micBtn.innerHTML = '<i class="fa-solid fa-microphone-slash"></i>';
             micBtn.style.color = '#EF4444';
             if (recognition) {
-                try { recognition.stop(); } catch(e) {}
-                if(voiceIndicator) {
+                try { recognition.stop(); } catch (e) { }
+                if (voiceIndicator) {
                     voiceIndicator.classList.remove('listening');
                     voiceStatus.innerText = "Mic is muted";
                 }
@@ -361,11 +361,11 @@ if (loginModal && closeLogin) {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             loginModal.classList.add('active');
-            
+
             // Auto focus email input for better UX
             setTimeout(() => {
                 const emailInput = loginModal.querySelector('input[type="email"]');
-                if(emailInput) emailInput.focus();
+                if (emailInput) emailInput.focus();
             }, 100);
         });
     });
@@ -416,7 +416,7 @@ if (loginModal && closeLogin) {
             const btn = loginForm.querySelector('.login-btn-submit');
             btn.innerText = 'Signing In...';
             btn.style.opacity = '0.8';
-            
+
             // Redirect to Dashboard
             setTimeout(() => {
                 window.location.href = 'dashboard.html';
@@ -433,7 +433,7 @@ const promoVideo = document.getElementById('promoVideo');
 
 if (watchVideoBtn && videoModal && closeVideo && promoVideo) {
     let originalSrc = promoVideo.src;
-    
+
     watchVideoBtn.addEventListener('click', (e) => {
         e.preventDefault();
         videoModal.classList.add('active');
@@ -493,15 +493,15 @@ if (demoModal && closeDemo) {
             const originalText = btn.innerText;
             btn.innerText = 'Requesting...';
             btn.style.opacity = '0.8';
-            
+
             setTimeout(() => {
                 btn.innerText = originalText;
                 btn.style.opacity = '1';
                 demoModal.classList.remove('active');
-                
+
                 // Show a clear success alert
                 alert("Success! Your demo request has been received. Our sales team will email you shortly to schedule the session.");
-                
+
                 // Reset the form
                 demoForm.reset();
             }, 1500);
@@ -520,18 +520,18 @@ if (moduleModal && closeModule) {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             const moduleId = btn.getAttribute('data-module');
-            
+
             // Hide all panes
             modulePanes.forEach(pane => {
                 pane.style.display = 'none';
             });
-            
+
             // Show the specific pane
             const activePane = document.getElementById('pane-' + moduleId);
             if (activePane) {
                 activePane.style.display = 'block';
             }
-            
+
             // Open modal
             moduleModal.classList.add('active');
         });
@@ -579,7 +579,7 @@ if (articleModal && closeArticle) {
     readMoreBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            
+
             // Find parent card to extract specific article info dynamically
             const card = btn.closest('.blog-card');
             if (card) {
@@ -653,5 +653,44 @@ if (shareArticleBtn) {
                 alert("Failed to copy link.");
             });
         }
+    });
+}
+
+// Telemedicine Fullscreen Logic
+const exploreTeleBtn = document.getElementById('exploreTeleBtn');
+const teleVideoUI = document.getElementById('teleVideoUI');
+const exitTeleBtn = document.getElementById('exitTeleBtn');
+
+if (exploreTeleBtn && teleVideoUI && exitTeleBtn) {
+    exploreTeleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        teleVideoUI.classList.add('fullscreen');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    });
+
+    exitTeleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        teleVideoUI.classList.remove('fullscreen');
+        document.body.style.overflow = ''; // Restore background scrolling
+    });
+}
+
+// Scroll to Top Logic
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if (scrolled > 20) {
+            scrollTopBtn.classList.add('show');
+        } else {
+            scrollTopBtn.classList.remove('show');
+        }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 }
