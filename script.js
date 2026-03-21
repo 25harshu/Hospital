@@ -674,23 +674,3 @@ if (exploreTeleBtn && teleVideoUI && exitTeleBtn) {
         document.body.style.overflow = ''; // Restore background scrolling
     });
 }
-
-// Scroll to Top Logic
-const scrollTopBtn = document.getElementById('scrollTopBtn');
-if (scrollTopBtn) {
-    window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
-        if (scrolled > 20) {
-            scrollTopBtn.classList.add('show');
-        } else {
-            scrollTopBtn.classList.remove('show');
-        }
-    });
-
-    scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}

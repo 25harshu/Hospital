@@ -346,9 +346,95 @@
             color: var(--success);
         }
 
-        .status.pending {
-            background: rgba(245, 158, 11, 0.1);
-            color: var(--warning);
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+
+            html,
+            body {
+                overflow-x: hidden !important;
+                width: 100%;
+                max-width: 100vw;
+            }
+
+            .sidebar {
+                position: fixed;
+                left: -260px;
+                z-index: 1000;
+                transition: left 0.3s ease;
+                box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .sidebar.active {
+                left: 0;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .search-bar {
+                width: 100%;
+                flex: 1;
+                margin: 0 15px;
+                padding: 8px 15px;
+            }
+
+            .topbar {
+                padding: 15px;
+            }
+
+            .user-profile>div {
+                display: none;
+            }
+
+            .dashboard-body {
+                padding: 20px;
+            }
+
+            .page-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .glass-panel {
+                width: 100%;
+                overflow-x: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .topbar {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .search-bar {
+                order: 3;
+                width: 100%;
+                margin: 0;
+            }
         }
     </style>
 </head>
@@ -369,8 +455,13 @@
         <a href="index.html" class="nav-item logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
     </div>
 
-    <div class="main-content">
+    <div class="main-content"
+        onclick="if(window.innerWidth <= 768 && document.querySelector('.sidebar').classList.contains('active')) document.querySelector('.sidebar').classList.remove('active')">
         <div class="topbar">
+            <button class="mobile-toggle"
+                onclick="event.stopPropagation(); document.querySelector('.sidebar').classList.toggle('active')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
             <div class="search-bar">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Search patients, doctors...">
