@@ -68,6 +68,12 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        .logo img {
+            transform: scale(3.0);
+            transform-origin: left center;
+            cursor: pointer;
+        }
+
         .nav-item {
             display: flex;
             align-items: center;
@@ -356,6 +362,9 @@
         }
 
         @media (max-width: 768px) {
+            .logo img {
+                transform: scale(2.0);
+            }
 
             html,
             body {
@@ -421,6 +430,10 @@
         }
 
         @media (max-width: 480px) {
+            .logo img {
+                transform: scale(1.5);
+            }
+
             .stats-grid {
                 grid-template-columns: 1fr;
             }
@@ -442,7 +455,9 @@
 <body>
     <div class="sidebar">
         <a href="index.html" style="text-decoration:none;">
-            <div class="logo"><i class="fa-solid fa-staff-snake"></i> MedFlow</div>
+            <div class="logo">
+                <img src="logo.png" alt="HIMS Logo" style="height: 45px; width: auto; max-width: 100%;">
+            </div>
         </a>
         <a href="#" class="nav-item active"><i class="fa-solid fa-border-all"></i> Dashboard</a>
         <a href="#" class="nav-item"><i class="fa-solid fa-users"></i> Patients</a>

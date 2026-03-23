@@ -30,7 +30,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden !important;
     width: 100%;
     max-width: 100vw;
@@ -327,9 +328,17 @@ ul {
     gap: 10px;
 }
 
+.logo img {
+    transform: scale(3.0);
+    transform-origin: left center;
+    cursor: pointer;
+}
+
 .nav-links {
     display: flex;
     gap: 30px;
+    margin-left: auto;
+    margin-right: 40px;
 }
 
 .nav-links a {
@@ -713,6 +722,14 @@ ul {
     transition: var(--transition);
 }
 
+.modules-grid .module-card:nth-child(n+5) {
+    display: none;
+}
+
+.modules-grid.expanded .module-card:nth-child(n+5) {
+    display: flex;
+}
+
 .module-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
@@ -810,17 +827,55 @@ ul {
     gap: 10px;
 }
 
+/* NORMAL VIDEO SIZE (medium bada) */
 .video-ui {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    height: 400px;
+
+    height: 500px;
+    /* 👈 increase from 400px */
+    max-width: 900px;
+    /* 👈 thoda wide */
+    width: 100%;
+    margin: 40px auto;
+    /* center */
 }
 
+/* VIDEO FIT */
 .video-bg {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* FULLSCREEN (unchanged) */
+.video-ui.fullscreen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 9999 !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    background: #000 !important;
+    max-width: 100vw !important;
+    transform: none !important;
+}
+
+.video-ui.fullscreen .video-bg {
+    border-radius: 0 !important;
+    object-position: top center !important;
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+    .video-ui {
+        height: 300px;
+        max-width: 100%;
+    }
 }
 
 .video-controls {
@@ -1909,12 +1964,17 @@ ul {
         font-size: 1.2rem;
     }
 
+    .logo img {
+        transform: scale(2.0);
+    }
+
     .nav-links {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
+        margin: 0;
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(10px);
         flex-direction: column;
@@ -2123,6 +2183,10 @@ ul {
 
     .logo {
         font-size: 1.1rem;
+    }
+
+    .logo img {
+        transform: scale(1.5);
     }
 
     .mobile-menu-btn {

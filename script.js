@@ -548,6 +548,30 @@ if (moduleModal && closeModule) {
     });
 }
 
+// Explore More Modules Toggle
+const exploreModulesBtn = document.getElementById('exploreModulesBtn');
+const modulesGrid = document.querySelector('.modules-grid');
+
+if (exploreModulesBtn && modulesGrid) {
+    exploreModulesBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        modulesGrid.classList.toggle('expanded');
+        
+        if (modulesGrid.classList.contains('expanded')) {
+            exploreModulesBtn.innerHTML = 'Show Less <i class="fa-solid fa-chevron-up"></i>';
+            // Optionally, trigger ScrollTrigger refresh so GSAP animates new cards
+            setTimeout(() => {
+                if(typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+            }, 100);
+        } else {
+            exploreModulesBtn.innerHTML = 'Explore More <i class="fa-solid fa-chevron-down"></i>';
+            // Scroll back to the section if needed
+            document.getElementById('modules').scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+}
+
 // Blog Modal Logic
 const viewAllPostsBtn = document.getElementById('viewAllPostsBtn');
 const blogModal = document.getElementById('blogModal');
