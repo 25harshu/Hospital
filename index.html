@@ -666,7 +666,7 @@
                     with our fully integrated telemedicine solution. Offer premium virtual care to patients worldwide
                     while maintaining secure, HIPAA-compliant standards.</p>
 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
+                <div class="tele-features-grid">
                     <div class="tele-feature-card"
                         style="background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); display: flex; align-items: flex-start; gap: 12px; border: 1px solid #feebc8;">
                         <i class="fa-solid fa-video color-primary"
@@ -812,7 +812,7 @@
             <div class="grid grid-2 gs-reveal">
                 <!-- Card 1 -->
                 <div class="feature-card hover-lift"
-                    style="background: white; border-radius: 24px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.04); border: 1px solid #edf2f7; position: relative; text-align: left;">
+                    style="background: white; border-radius: 24px; padding: clamp(20px, 5vw, 40px); box-shadow: 0 10px 40px rgba(0,0,0,0.04); border: 1px solid #edf2f7; position: relative; text-align: left;">
 
                     <div style="display: flex; align-items: flex-start; gap: 24px; margin-bottom: 24px;">
                         <div
@@ -850,6 +850,11 @@
                             border-color: #fbd38d;
                             box-shadow: 0 6px 20px rgba(221,107,32,0.08);
                             background: white;
+                        }
+                        @media (max-width: 768px) {
+                            .ops-bullet {
+                                margin-left: 0;
+                            }
                         }
                         .ops-bullet-icon {
                             background: #fff7ed;
@@ -891,7 +896,7 @@
 
                 <!-- Card 2 -->
                 <div class="feature-card hover-lift"
-                    style="background: white; border-radius: 24px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.04); border: 1px solid #edf2f7; position: relative; text-align: left;">
+                    style="background: white; border-radius: 24px; padding: clamp(20px, 5vw, 40px); box-shadow: 0 10px 40px rgba(0,0,0,0.04); border: 1px solid #edf2f7; position: relative; text-align: left;">
 
                     <div style="display: flex; align-items: flex-start; gap: 24px; margin-bottom: 24px;">
                         <div
@@ -955,7 +960,7 @@
         </div>
 
         <div class="container container-sm hover-lift ai-main-container"
-            style="max-width: 1050px; text-align: left; background: linear-gradient(135deg, #fff7ed 0%, #feebc8 100%); color: #1A202C; border-radius: 32px; padding: 40px 50px; box-shadow: 0 20px 40px rgba(221,107,32,0.15); border: 1px solid rgba(221,107,32,0.2); transition: all 0.4s ease;">
+            style="max-width: 1050px; text-align: left; background: linear-gradient(135deg, #fff7ed 0%, #feebc8 100%); color: #1A202C; border-radius: 32px; padding: clamp(20px, 5vw, 50px); box-shadow: 0 20px 40px rgba(221,107,32,0.15); border: 1px solid rgba(221,107,32,0.2); transition: all 0.4s ease;">
             <div class="grid grid-2 gs-reveal" style="align-items: center; gap: 40px;">
                 <!-- Left Content: Text and Cards -->
                 <div class="ai-content">
@@ -1031,7 +1036,7 @@
                     style="position: relative; display: flex; justify-content: flex-end; align-items: center;">
                     <!-- Circular Mask -->
                     <div
-                        style="width: 380px; height: 380px; border-radius: 50%; overflow: hidden; position: relative; box-shadow: 0 0 60px rgba(221,107,32,0.15); border: 6px solid white;">
+                        style="width: clamp(200px, 100%, 380px); aspect-ratio: 1/1; height: auto; border-radius: 50%; overflow: hidden; position: relative; box-shadow: 0 0 60px rgba(221,107,32,0.15); border: 6px solid white;">
                         <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=800"
                             alt="Doctor looking at phone"
                             style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%;">
