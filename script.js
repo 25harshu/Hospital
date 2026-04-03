@@ -109,50 +109,64 @@ if (chatToggle && chatWindow && closeChat) {
             chatMsg.value = "";
             chatBody.scrollTop = chatBody.scrollHeight;
 
-            // Simulate Bot reply
+            // Show Typing Indicator
+            const typingIndicator = document.createElement('div');
+            typingIndicator.className = 'typing-indicator';
+            typingIndicator.id = 'typingIndicator';
+            typingIndicator.innerHTML = '<span></span><span></span><span></span>';
+            chatBody.appendChild(typingIndicator);
+            chatBody.scrollTop = chatBody.scrollHeight;
+
+            // Simulate AI Bot reply (1.5s to 2.5s delay for realism)
+            const thinkingTime = Math.floor(Math.random() * 1000) + 1500;
             setTimeout(() => {
+                // Remove typing indicator
+                const indicator = document.getElementById('typingIndicator');
+                if (indicator) {
+                    indicator.remove();
+                }
+
                 const botDiv = document.createElement('div');
                 botDiv.className = 'msg received';
 
-                let reply = "I'm the HIMS AI Assistant! Ask me concerning hospital features, pricing, telemedicine, patient records, billing, or scheduling!";
+                let reply = "Hello! I am your AI Assistant. How can I help you today?";
                 const lowerText = text.toLowerCase();
 
-                if (lowerText.includes('demo') || lowerText.includes('book')) {
-                    reply = "I'd be happy to arrange a live demo! Could you please provide your work email address, or click 'Request Demo' at the top?";
-                } else if (lowerText.includes('trial') || lowerText.includes('free')) {
+                // Hinglish & Core AI Intents
+                if (lowerText.match(/appointment.*book|appointment.*kaise|appointment chahiye|booking/i)) {
+                    reply = "Booking an appointment is very easy! You can click the 'Book Appointment' button at the top, or simply drop your phone number or email here and our team will get back to you.";
+                } else if (lowerText.match(/doctor.*available|doctor.*hai|doctor ke baare/i)) {
+                    reply = "Yes, absolutely! We have expert doctors available across all specialties. Are you looking for a specific department like Cardiology or Pediatrics?";
+                } else if (lowerText.match(/fee|paisa|kitna|price|cost|charge/i)) {
+                    reply = "Our standard consultation fees start at ₹500. For detailed pricing plans on hospital features, you can check out the 'Pricing' section above.";
+                } else if (lowerText.match(/kaha|address|location|kidhar/i)) {
+                    reply = "Our hospital is located at 123 Health Avenue, Cyber City, Gurgaon, India. You can easily find 'HIMS Hospital' on Google Maps!";
+                } else if (lowerText.match(/time|kab|khul/i)) {
+                    reply = "Our hospital operates 24/7. Both emergency services and the pharmacy are available round the clock.";
+                } else if (lowerText.match(/demo/i)) {
+                    reply = "I'd be happy to arrange a live demo! Could you please provide your work email address?";
+                } else if (lowerText.match(/trial|free/i)) {
                     reply = "Awesome! To set up your 14-day free trial, what is the best email to reach you at?";
-                } else if (lowerText.includes('sales') || lowerText.includes('contact')) {
-                    reply = "Our sales and support teams are ready to help. Please share your email address and we'll be in touch.";
-                } else if (lowerText.includes('pricing') || lowerText.includes('cost') || lowerText.includes('price') || lowerText.includes('fees')) {
-                    reply = "Our pricing starts at ₹4,999/mo for basic clinics, up to custom pricing for Enterprise hospitals. Would you like a detailed quote?";
-                } else if (lowerText.includes('telemedicine') || lowerText.includes('video') || lowerText.includes('call') || lowerText.includes('online')) {
-                    reply = "Our built-in Telemedicine platform supports HD video calls, instant e-prescriptions, and seamless EHR integration. No third-party apps needed!";
-                } else if (lowerText.includes('billing') || lowerText.includes('payment') || lowerText.includes('invoice') || lowerText.includes('money')) {
-                    reply = "HIMS fully automates billing! We reduce claims errors, speed up the revenue cycle, and support secure online patient payments via credit/debit/UPI.";
-                } else if (lowerText.includes('inventory') || lowerText.includes('pharmacy') || lowerText.includes('medicine') || lowerText.includes('stock')) {
-                    reply = "Our Pharmacy module tracks stock alerts in real-time, manages suppliers, predicts low stock using AI, and greatly minimizes medication wastage.";
-                } else if (lowerText.includes('appointment') || lowerText.includes('schedule') || lowerText.includes('booking')) {
-                    reply = "Patients can book appointments via our portal 24/7. It syncs directly with doctors' calendars to reduce no-shows and optimize your daily patient load.";
-                } else if (lowerText.includes('security') || lowerText.includes('hipaa') || lowerText.includes('safe') || lowerText.includes('privacy') || lowerText.includes('data')) {
-                    reply = "Data security is our top priority. The HIMS platform is fully HIPAA-compliant, featuring end-to-end cloud encryption, backups, and role-based access.";
-                } else if (lowerText.includes('patient') || lowerText.includes('ehr') || lowerText.includes('emr') || lowerText.includes('record') || lowerText.includes('history')) {
-                    reply = "Our Digital Health Records (EHR) system gives doctors 1-click access to complete patient history, lab results, past medications, and visit notes.";
-                } else if (lowerText.includes('roi') || lowerText.includes('return') || lowerText.includes('save') || lowerText.includes('savings')) {
-                    reply = "HIMS typically saves mid-sized clinics up to 120+ hours of administrative work and boosts revenue capture by up to 12% monthly by preventing leakage!";
-                } else if (lowerText.includes('hello') || lowerText.includes('hi ') || lowerText.includes('hey') || lowerText.includes('hi')) {
-                    reply = "Hello there! I'm the HIMS AI. How can I help you transform your hospital today?";
-                } else if (lowerText.includes('thank')) {
-                    reply = "You're very welcome! Let me know if you have any other questions.";
-                } else if (lowerText.includes('@')) {
-                    reply = "Thank you! I've securely noted your email. Our team will contact you shortly. Is there anything else I can help you with?";
+                } else if (lowerText.match(/telemedicine|video|call|online/i)) {
+                    reply = "You can easily consult our doctors via HD video calls from the comfort of your home. Please select the 'Telemedicine' module in our app.";
+                } else if (lowerText.match(/billing|payment|invoice|money/i)) {
+                    reply = "You can pay your bills online (UPI, Credit/Debit card) or at the hospital counter with cash. HIMS supports fully secure automated billing.";
+                } else if (lowerText.match(/inventory|pharmacy|medicine|stock/i)) {
+                    reply = "Our Pharmacy module provides real-time stock alerts and medicine availability updates.";
+                } else if (lowerText.match(/namaste|kya hal|kaise ho|hello|hi\b|hey\b|greetings/i)) {
+                    reply = "Hello! I am the HIMS AI Assistant. Would you like me to connect you with a doctor, or are you looking to explore our hospital management features?";
+                } else if (lowerText.match(/thank|thanks|shukriya|dhanyavad/i)) {
+                    reply = "You're very welcome! Let me know if you need any other assistance.";
+                } else if (lowerText.match(/@|[0-9]{10}/)) {
+                    reply = "Thank you! I've securely stored your contact details. Our team will get in touch with you shortly.";
                 } else {
-                    reply = "That's a great question! I am still learning about that specific topic. If you leave your email or request a demo, our human healthcare experts will answer this for you right away!";
+                    reply = "I'm not exactly sure about that. Could you please provide a few more details? Alternatively, leave your phone number here and a medical expert will reach out to you directly.";
                 }
 
                 botDiv.innerText = reply;
                 chatBody.appendChild(botDiv);
                 chatBody.scrollTop = chatBody.scrollHeight;
-            }, 1000);
+            }, thinkingTime);
         }
     }
 
@@ -698,3 +712,133 @@ if (exploreTeleBtn && teleVideoUI && exitTeleBtn) {
         document.body.style.overflow = ''; // Restore background scrolling
     });
 }
+
+// Feedback UI Logic
+const feedbackBtn = document.getElementById('feedbackBtn');
+const feedbackModal = document.getElementById('feedbackModal');
+const closeFeedback = document.getElementById('closeFeedback');
+const feedbackStars = document.querySelectorAll('#feedbackStars i');
+const submitFeedbackBtn = document.getElementById('submitFeedbackBtn');
+const feedbackMessage = document.getElementById('feedbackMessage');
+const feedbackText = document.getElementById('feedbackText');
+let currentRating = 0;
+
+if (feedbackBtn && feedbackModal && closeFeedback) {
+    feedbackBtn.addEventListener('click', () => {
+        feedbackModal.classList.add('active');
+    });
+
+    closeFeedback.addEventListener('click', () => {
+        feedbackModal.classList.remove('active');
+        // Reset form
+        feedbackMessage.style.display = 'none';
+        feedbackText.value = '';
+        currentRating = 0;
+        feedbackStars.forEach(s => s.classList.replace('fa-solid', 'fa-regular'));
+        feedbackStars.forEach(s => s.style.color = '#cbd5e1');
+    });
+
+    // Star ratings
+    feedbackStars.forEach((star, index) => {
+        star.addEventListener('click', () => {
+            currentRating = index + 1;
+            feedbackStars.forEach((s, idx) => {
+                if (idx < currentRating) {
+                    s.classList.replace('fa-regular', 'fa-solid');
+                    s.style.color = '#f59e0b';
+                } else {
+                    s.classList.replace('fa-solid', 'fa-regular');
+                    s.style.color = '#cbd5e1';
+                }
+            });
+        });
+
+        star.addEventListener('mouseenter', () => {
+            feedbackStars.forEach((s, idx) => {
+                if (idx <= index) {
+                    s.style.color = '#f59e0b';
+                    s.classList.replace('fa-regular', 'fa-solid');
+                } else if (idx >= currentRating) {
+                    s.style.color = '#cbd5e1';
+                    s.classList.replace('fa-solid', 'fa-regular');
+                }
+            });
+        });
+
+        star.addEventListener('mouseleave', () => {
+            feedbackStars.forEach((s, idx) => {
+                if (idx < currentRating) {
+                    s.style.color = '#f59e0b';
+                    s.classList.replace('fa-regular', 'fa-solid');
+                } else {
+                    s.style.color = '#cbd5e1';
+                    s.classList.replace('fa-solid', 'fa-regular');
+                }
+            });
+        });
+    });
+
+    // Submit logic
+    submitFeedbackBtn.addEventListener('click', () => {
+        if (currentRating === 0) {
+            alert("Please select a star rating!");
+            return;
+        }
+        feedbackMessage.style.display = 'block';
+        setTimeout(() => {
+            feedbackModal.classList.remove('active');
+            feedbackMessage.style.display = 'none';
+            feedbackText.value = '';
+            currentRating = 0;
+            feedbackStars.forEach(s => {
+                s.classList.replace('fa-solid', 'fa-regular');
+                s.style.color = '#cbd5e1';
+            });
+        }, 2000);
+    });
+}
+
+// Mobile Slide Animations for Empower Your Workforce Cards
+document.addEventListener("DOMContentLoaded", () => {
+    let mm = gsap.matchMedia();
+
+    mm.add("(max-width: 768px)", () => {
+        const card1 = document.getElementById('workforce-card-1');
+        const card2 = document.getElementById('workforce-card-2');
+        
+        if (card1) {
+            gsap.fromTo(card1, 
+                { x: -100, opacity: 0 },
+                { 
+                    x: 0, 
+                    opacity: 1, 
+                    duration: 0.8, 
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: card1,
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    }
+                }
+            );
+        }
+        
+        if (card2) {
+            gsap.fromTo(card2, 
+                { x: 100, opacity: 0 },
+                { 
+                    x: 0, 
+                    opacity: 1, 
+                    duration: 0.8, 
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: card2,
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    }
+                }
+            );
+        }
+    });
+});
+
